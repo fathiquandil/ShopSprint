@@ -1,0 +1,983 @@
+Product Number: 1
+ID: 6ae4a408a83fe38789ef1adc
+English Name: Samsung Galaxy S25
+English Description: Samsung smartphone with advanced features
+----------------------------------------
+
+Product Number: 2
+ID: 6ae8ce49518ade02481fc2f3
+English Name: Annibale Colombo Bed
+English Description: The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.
+----------------------------------------
+
+Product Number: 3
+ID: 6ae8ce49518ade02481fc2f4
+English Name: Annibale Colombo Sofa
+English Description: The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.
+----------------------------------------
+
+Product Number: 4
+ID: 6ae8ce49518ade02481fc2f5
+English Name: Bedside Table African Cherry
+English Description: The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.
+----------------------------------------
+
+Product Number: 5
+ID: 6ae8ce49518ade02481fc2f6
+English Name: Knoll Saarinen Executive Conference Chair
+English Description: The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.
+----------------------------------------
+
+Product Number: 6
+ID: 6ae8ce49518ade02481fc2f7
+English Name: Wooden Bathroom Sink With Mirror
+English Description: The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.
+----------------------------------------
+
+Product Number: 7
+ID: 6ae8ce49518ade02481fc2f8
+English Name: Decoration Swing
+English Description: The Decoration Swing is a charming addition to your home decor. Crafted with intricate details, it adds a touch of elegance and whimsy to any room.
+----------------------------------------
+
+Product Number: 8
+ID: 6ae8ce49518ade02481fc2f9
+English Name: Family Tree Photo Frame
+English Description: The Family Tree Photo Frame is a sentimental and stylish way to display your cherished family memories. With multiple photo slots, it tells the story of your loved ones.
+----------------------------------------
+
+Product Number: 9
+ID: 6ae8ce49518ade02481fc2fa
+English Name: House Showpiece Plant
+English Description: The House Showpiece Plant is an artificial plant that brings a touch of nature to your home without the need for maintenance. It adds greenery and style to any space.
+----------------------------------------
+
+Product Number: 10
+ID: 6ae8ce49518ade02481fc2fb
+English Name: Plant Pot
+English Description: The Plant Pot is a stylish container for your favorite plants. With a sleek design, it complements your indoor or outdoor garden, adding a modern touch to your plant display.
+----------------------------------------
+
+Product Number: 11
+ID: 6ae8ce49518ade02481fc2fc
+English Name: Table Lamp
+English Description: The Table Lamp is a functional and decorative lighting solution for your living space. With a modern design, it provides both ambient and task lighting, enhancing the atmosphere.
+----------------------------------------
+
+Product Number: 12
+ID: 6ae8ce49518ade02481fc2fd
+English Name: Bamboo Spatula
+English Description: The Bamboo Spatula is a versatile kitchen tool made from eco-friendly bamboo. Ideal for flipping, stirring, and serving various dishes.
+----------------------------------------
+
+Product Number: 13
+ID: 6ae8ce49518ade02481fc2fe
+English Name: Black Aluminium Cup
+English Description: The Black Aluminium Cup is a stylish and durable cup suitable for both hot and cold beverages. Its sleek black design adds a modern touch to your drinkware collection.
+----------------------------------------
+
+Product Number: 14
+ID: 6ae8ce49518ade02481fc2ff
+English Name: Black Whisk
+English Description: The Black Whisk is a kitchen essential for whisking and beating ingredients. Its ergonomic handle and sleek design make it a practical and stylish tool.
+----------------------------------------
+
+Product Number: 15
+ID: 6ae8ce49518ade02481fc300
+English Name: Boxed Blender
+English Description: The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.
+----------------------------------------
+
+Product Number: 16
+ID: 6ae8ce49518ade02481fc301
+English Name: Carbon Steel Wok
+English Description: The Carbon Steel Wok is a versatile cooking pan suitable for stir-frying, sautéing, and deep frying. Its sturdy construction ensures even heat distribution for delicious meals.
+----------------------------------------
+
+Product Number: 17
+ID: 6ae8ce49518ade02481fc302
+English Name: Chopping Board
+English Description: The Chopping Board is an essential kitchen accessory for food preparation. Made from durable material, it provides a safe and hygienic surface for cutting and chopping.
+----------------------------------------
+
+Product Number: 18
+ID: 6ae8ce49518ade02481fc303
+English Name: Citrus Squeezer Yellow
+English Description: The Citrus Squeezer in Yellow is a handy tool for extracting juice from citrus fruits. Its vibrant color adds a cheerful touch to your kitchen gadgets.
+----------------------------------------
+
+Product Number: 19
+ID: 6ae8ce49518ade02481fc304
+English Name: Egg Slicer
+English Description: The Egg Slicer is a convenient tool for slicing boiled eggs evenly. It's perfect for salads, sandwiches, and other dishes where sliced eggs are desired.
+----------------------------------------
+
+Product Number: 20
+ID: 6ae8ce49518ade02481fc305
+English Name: Electric Stove
+English Description: The Electric Stove provides a portable and efficient cooking solution. Ideal for small kitchens or as an additional cooking surface for various culinary needs.
+----------------------------------------
+
+Product Number: 21
+ID: 6ae8ce49518ade02481fc306
+English Name: Fine Mesh Strainer
+English Description: The Fine Mesh Strainer is a versatile tool for straining liquids and sifting dry ingredients. Its fine mesh ensures efficient filtering for smooth cooking and baking.
+----------------------------------------
+
+Product Number: 22
+ID: 6ae8ce49518ade02481fc307
+English Name: Fork
+English Description: The Fork is a classic utensil for various dining and serving purposes. Its durable and ergonomic design makes it a reliable choice for everyday use.
+----------------------------------------
+
+Product Number: 23
+ID: 6ae8ce49518ade02481fc308
+English Name: Glass
+English Description: The Glass is a versatile and elegant drinking vessel suitable for a variety of beverages. Its clear design allows you to enjoy the colors and textures of your drinks.
+----------------------------------------
+
+Product Number: 24
+ID: 6ae8ce49518ade02481fc309
+English Name: Grater Black
+English Description: The Grater in Black is a handy kitchen tool for grating cheese, vegetables, and more. Its sleek design and sharp blades make food preparation efficient and easy.
+----------------------------------------
+
+Product Number: 25
+ID: 6ae8ce49518ade02481fc30a
+English Name: Hand Blender
+English Description: The Hand Blender is a versatile kitchen appliance for blending, pureeing, and mixing. Its compact design and powerful motor make it a convenient tool for various recipes.
+----------------------------------------
+
+Product Number: 26
+ID: 6ae8ce49518ade02481fc30b
+English Name: Ice Cube Tray
+English Description: The Ice Cube Tray is a practical accessory for making ice cubes in various shapes. Perfect for keeping your drinks cool and adding a fun element to your beverages.
+----------------------------------------
+
+Product Number: 27
+ID: 6ae8ce49518ade02481fc30c
+English Name: Kitchen Sieve
+English Description: The Kitchen Sieve is a versatile tool for sifting and straining dry and wet ingredients. Its fine mesh design ensures smooth results in your cooking and baking.
+----------------------------------------
+
+Product Number: 28
+ID: 6ae8ce49518ade02481fc30d
+English Name: Knife
+English Description: The Knife is an essential kitchen tool for chopping, slicing, and dicing. Its sharp blade and ergonomic handle make it a reliable choice for food preparation.
+----------------------------------------
+
+Product Number: 29
+ID: 6ae8ce49518ade02481fc30e
+English Name: Lunch Box
+English Description: The Lunch Box is a convenient and portable container for packing and carrying your meals. With compartments for different foods, it's perfect for on-the-go dining.
+----------------------------------------
+
+Product Number: 30
+ID: 6ae8ce49518ade02481fc30f
+English Name: Microwave Oven
+English Description: The Microwave Oven is a versatile kitchen appliance for quick and efficient cooking, reheating, and defrosting. Its compact size makes it suitable for various kitchen setups.
+----------------------------------------
+
+Product Number: 31
+ID: 6ae8ce49518ade02481fc310
+English Name: Mug Tree Stand
+English Description: The Mug Tree Stand is a stylish and space-saving solution for organizing your mugs. Keep your favorite mugs easily accessible and neatly displayed in your kitchen.
+----------------------------------------
+
+Product Number: 32
+ID: 6ae8ce49518ade02481fc311
+English Name: Pan
+English Description: The Pan is a versatile and essential cookware item for frying, sautéing, and cooking various dishes. Its non-stick coating ensures easy food release and cleanup.
+----------------------------------------
+
+Product Number: 33
+ID: 6ae8ce49518ade02481fc312
+English Name: Plate
+English Description: The Plate is a classic and essential dishware item for serving meals. Its durable and stylish design makes it suitable for everyday use or special occasions.
+----------------------------------------
+
+Product Number: 34
+ID: 6ae8ce49518ade02481fc313
+English Name: Red Tongs
+English Description: The Red Tongs are versatile kitchen tongs suitable for various cooking and serving tasks. Their vibrant color adds a pop of excitement to your kitchen utensils.
+----------------------------------------
+
+Product Number: 35
+ID: 6ae8ce49518ade02481fc314
+English Name: Silver Pot With Glass Cap
+English Description: The Silver Pot with Glass Cap is a stylish and functional cookware item for boiling, simmering, and preparing delicious meals. Its glass cap allows you to monitor cooking progress.
+----------------------------------------
+
+Product Number: 36
+ID: 6ae8ce49518ade02481fc315
+English Name: Slotted Turner
+English Description: The Slotted Turner is a kitchen utensil designed for flipping and turning food items. Its slotted design allows excess liquid to drain, making it ideal for frying and sautéing.
+----------------------------------------
+
+Product Number: 37
+ID: 6ae8ce49518ade02481fc316
+English Name: Spice Rack
+English Description: The Spice Rack is a convenient organizer for your spices and seasonings. Keep your kitchen essentials within reach and neatly arranged with this stylish spice rack.
+----------------------------------------
+
+Product Number: 38
+ID: 6ae8ce49518ade02481fc317
+English Name: Spoon
+English Description: The Spoon is a versatile kitchen utensil for stirring, serving, and tasting. Its ergonomic design and durable construction make it an essential tool for every kitchen.
+----------------------------------------
+
+Product Number: 39
+ID: 6ae8ce49518ade02481fc318
+English Name: Tray
+English Description: The Tray is a functional and decorative item for serving snacks, appetizers, or drinks. Its stylish design makes it a versatile accessory for entertaining guests.
+----------------------------------------
+
+Product Number: 40
+ID: 6ae8ce49518ade02481fc319
+English Name: Wooden Rolling Pin
+English Description: The Wooden Rolling Pin is a classic kitchen tool for rolling out dough for baking. Its smooth surface and sturdy handles make it easy to achieve uniform thickness.
+----------------------------------------
+
+Product Number: 41
+ID: 6ae8ce49518ade02481fc31a
+English Name: Yellow Peeler
+English Description: The Yellow Peeler is a handy tool for peeling fruits and vegetables with ease. Its bright yellow color adds a cheerful touch to your kitchen gadgets.
+----------------------------------------
+
+Product Number: 42
+ID: 6ae8ce49518ade02481fc31b
+English Name: Apple MacBook Pro 14 Inch Space Grey
+English Description: The MacBook Pro 14 Inch in Space Grey is a powerful and sleek laptop, featuring Apple's M1 Pro chip for exceptional performance and a stunning Retina display.
+----------------------------------------
+
+Product Number: 43
+ID: 6ae8ce49518ade02481fc31c
+English Name: Asus Zenbook Pro Dual Screen Laptop
+English Description: The Asus Zenbook Pro Dual Screen Laptop is a high-performance device with dual screens, providing productivity and versatility for creative professionals.
+----------------------------------------
+
+Product Number: 44
+ID: 6ae8ce49518ade02481fc31d
+English Name: Huawei Matebook X Pro
+English Description: The Huawei Matebook X Pro is a slim and stylish laptop with a high-resolution touchscreen display, offering a premium experience for users on the go.
+----------------------------------------
+
+Product Number: 45
+ID: 6ae8ce49518ade02481fc31e
+English Name: Lenovo Yoga 920
+English Description: The Lenovo Yoga 920 is a 2-in-1 convertible laptop with a flexible hinge, allowing you to use it as a laptop or tablet, offering versatility and portability.
+----------------------------------------
+
+Product Number: 46
+ID: 6ae8ce49518ade02481fc31f
+English Name: New DELL XPS 13 9300 Laptop
+English Description: The New DELL XPS 13 9300 Laptop is a compact and powerful device, featuring a virtually borderless InfinityEdge display and high-end performance for various tasks.
+----------------------------------------
+
+Product Number: 47
+ID: 6ae8ce49518ade02481fc320
+English Name: Blue & Black Check Shirt
+English Description: The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.
+----------------------------------------
+
+Product Number: 48
+ID: 6ae8ce49518ade02481fc321
+English Name: Gigabyte Aorus Men Tshirt
+English Description: The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.
+----------------------------------------
+
+Product Number: 49
+ID: 6ae8ce49518ade02481fc322
+English Name: Man Plaid Shirt
+English Description: The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.
+----------------------------------------
+
+Product Number: 50
+ID: 6ae8ce49518ade02481fc323
+English Name: Man Short Sleeve Shirt
+English Description: The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.
+----------------------------------------
+
+Product Number: 51
+ID: 6ae8ce49518ade02481fc324
+English Name: Men Check Shirt
+English Description: The Men Check Shirt is a classic and versatile shirt featuring a stylish check pattern. Suitable for various occasions, it adds a smart and polished touch to your wardrobe.
+----------------------------------------
+
+Product Number: 52
+ID: 6ae8ce49518ade02481fc325
+English Name: Nike Air Jordan 1 Red And Black
+English Description: The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.
+----------------------------------------
+
+Product Number: 53
+ID: 6ae8ce49518ade02481fc326
+English Name: Nike Baseball Cleats
+English Description: Nike Baseball Cleats are designed for maximum traction and performance on the baseball field. They provide stability and support for players during games and practices.
+----------------------------------------
+
+Product Number: 54
+ID: 6ae8ce49518ade02481fc327
+English Name: Puma Future Rider Trainers
+English Description: The Puma Future Rider Trainers offer a blend of retro style and modern comfort. Perfect for casual wear, these trainers provide a fashionable and comfortable option for everyday use.
+----------------------------------------
+
+Product Number: 55
+ID: 6ae8ce49518ade02481fc328
+English Name: Sports Sneakers Off White & Red
+English Description: The Sports Sneakers in Off White and Red combine style and functionality, making them a fashionable choice for sports enthusiasts. The red and off-white color combination adds a bold and energetic touch.
+----------------------------------------
+
+Product Number: 56
+ID: 6ae8ce49518ade02481fc329
+English Name: Sports Sneakers Off White Red
+English Description: Another variant of the Sports Sneakers in Off White Red, featuring a unique design. These sneakers offer style and comfort for casual occasions.
+----------------------------------------
+
+Product Number: 57
+ID: 6ae8ce49518ade02481fc32a
+English Name: Brown Leather Belt Watch
+English Description: The Brown Leather Belt Watch is a stylish timepiece with a classic design. Featuring a genuine leather strap and a sleek dial, it adds a touch of sophistication to your look.
+----------------------------------------
+
+Product Number: 58
+ID: 6ae8ce49518ade02481fc32b
+English Name: Longines Master Collection
+English Description: The Longines Master Collection is an elegant and refined watch known for its precision and craftsmanship. With a timeless design, it's a symbol of luxury and sophistication.
+----------------------------------------
+
+Product Number: 59
+ID: 6ae8ce49518ade02481fc32c
+English Name: Rolex Cellini Date Black Dial
+English Description: The Rolex Cellini Date with Black Dial is a classic and prestigious watch. With a black dial and date complication, it exudes sophistication and is a symbol of Rolex's heritage.
+----------------------------------------
+
+Product Number: 60
+ID: 6ae8ce49518ade02481fc32d
+English Name: Rolex Cellini Moonphase
+English Description: The Rolex Cellini Moonphase is a masterpiece of horology, featuring a moon phase complication and exquisite design. It reflects Rolex's commitment to precision and elegance.
+----------------------------------------
+
+Product Number: 61
+ID: 6ae8ce49518ade02481fc32e
+English Name: Rolex Datejust
+English Description: The Rolex Datejust is an iconic and versatile timepiece with a date window. Known for its timeless design and reliability, it's a symbol of Rolex's watchmaking excellence.
+----------------------------------------
+
+Product Number: 62
+ID: 6ae8ce49518ade02481fc32f
+English Name: Rolex Submariner Watch
+English Description: The Rolex Submariner is a legendary dive watch with a rich history. Known for its durability and water resistance, it's a symbol of adventure and exploration.
+----------------------------------------
+
+Product Number: 63
+ID: 6ae8ce49518ade02481fc330
+English Name: Amazon Echo Plus
+English Description: The Amazon Echo Plus is a smart speaker with built-in Alexa voice control. It features premium sound quality and serves as a hub for controlling smart home devices.
+----------------------------------------
+
+Product Number: 64
+ID: 6ae8ce49518ade02481fc331
+English Name: Apple Airpods
+English Description: The Apple Airpods offer a seamless wireless audio experience. With easy pairing, high-quality sound, and Siri integration, they are perfect for on-the-go listening.
+----------------------------------------
+
+Product Number: 65
+ID: 6ae8ce49518ade02481fc332
+English Name: Apple AirPods Max Silver
+English Description: The Apple AirPods Max in Silver are premium over-ear headphones with high-fidelity audio, adaptive EQ, and active noise cancellation. Experience immersive sound in style.
+----------------------------------------
+
+Product Number: 66
+ID: 6ae8ce49518ade02481fc333
+English Name: Apple Airpower Wireless Charger
+English Description: The Apple AirPower Wireless Charger provides a convenient way to charge your compatible Apple devices wirelessly. Simply place your devices on the charging mat for effortless charging.
+----------------------------------------
+
+Product Number: 67
+ID: 6ae8ce49518ade02481fc334
+English Name: Apple HomePod Mini Cosmic Grey
+English Description: The Apple HomePod Mini in Cosmic Grey is a compact smart speaker that delivers impressive audio and integrates seamlessly with the Apple ecosystem for a smart home experience.
+----------------------------------------
+
+Product Number: 68
+ID: 6ae8ce49518ade02481fc335
+English Name: Apple iPhone Charger
+English Description: The Apple iPhone Charger is a high-quality charger designed for fast and efficient charging of your iPhone. Ensure your device stays powered up and ready to go.
+----------------------------------------
+
+Product Number: 69
+ID: 6ae8ce49518ade02481fc336
+English Name: Apple MagSafe Battery Pack
+English Description: The Apple MagSafe Battery Pack is a portable and convenient way to add extra battery life to your MagSafe-compatible iPhone. Attach it magnetically for a secure connection.
+----------------------------------------
+
+Product Number: 70
+ID: 6ae8ce49518ade02481fc337
+English Name: Apple Watch Series 4 Gold
+English Description: The Apple Watch Series 4 in Gold is a stylish and advanced smartwatch with features like heart rate monitoring, fitness tracking, and a beautiful Retina display.
+----------------------------------------
+
+Product Number: 71
+ID: 6ae8ce49518ade02481fc338
+English Name: Beats Flex Wireless Earphones
+English Description: The Beats Flex Wireless Earphones offer a comfortable and versatile audio experience. With magnetic earbuds and up to 12 hours of battery life, they are ideal for everyday use.
+----------------------------------------
+
+Product Number: 72
+ID: 6ae8ce49518ade02481fc339
+English Name: iPhone 12 Silicone Case with MagSafe Plum
+English Description: The iPhone 12 Silicone Case with MagSafe in Plum is a stylish and protective case designed for the iPhone 12. It features MagSafe technology for easy attachment of accessories.
+----------------------------------------
+
+Product Number: 73
+ID: 6ae8ce49518ade02481fc33a
+English Name: Monopod
+English Description: The Monopod is a versatile camera accessory for stable and adjustable shooting. Perfect for capturing selfies, group photos, and videos with ease.
+----------------------------------------
+
+Product Number: 74
+ID: 6ae8ce49518ade02481fc33b
+English Name: Selfie Lamp with iPhone
+English Description: The Selfie Lamp with iPhone is a portable and adjustable LED light designed to enhance your selfies and video calls. Attach it to your iPhone for well-lit photos.
+----------------------------------------
+
+Product Number: 75
+ID: 6ae8ce49518ade02481fc33c
+English Name: Selfie Stick Monopod
+English Description: The Selfie Stick Monopod is a extendable and foldable device for capturing the perfect selfie or group photo. Compatible with smartphones and cameras.
+----------------------------------------
+
+Product Number: 76
+ID: 6ae8ce49518ade02481fc33d
+English Name: TV Studio Camera Pedestal
+English Description: The TV Studio Camera Pedestal is a professional-grade camera support system for smooth and precise camera movements in a studio setting. Ideal for broadcast and production.
+----------------------------------------
+
+Product Number: 77
+ID: 6ae8ce49518ade02481fc33e
+English Name: Generic Motorcycle
+English Description: The Generic Motorcycle is a versatile and reliable bike suitable for various riding preferences. With a balanced design, it provides a comfortable and efficient riding experience.
+----------------------------------------
+
+Product Number: 78
+ID: 6ae8ce49518ade02481fc33f
+English Name: Kawasaki Z800
+English Description: The Kawasaki Z800 is a powerful and agile sportbike known for its striking design and performance. It's equipped with advanced features, making it a favorite among motorcycle enthusiasts.
+----------------------------------------
+
+Product Number: 79
+ID: 6ae8ce49518ade02481fc340
+English Name: MotoGP CI.H1
+English Description: The MotoGP CI.H1 is a high-performance motorcycle inspired by MotoGP racing technology. It offers cutting-edge features and precision engineering for an exhilarating riding experience.
+----------------------------------------
+
+Product Number: 80
+ID: 6ae8ce49518ade02481fc341
+English Name: Scooter Motorcycle
+English Description: The Scooter Motorcycle is a practical and fuel-efficient bike ideal for urban commuting. It features a step-through design and user-friendly controls for easy maneuverability.
+----------------------------------------
+
+Product Number: 81
+ID: 6ae8ce49518ade02481fc342
+English Name: Sportbike Motorcycle
+English Description: The Sportbike Motorcycle is designed for speed and agility, with a sleek and aerodynamic profile. It's suitable for riders looking for a dynamic and thrilling riding experience.
+----------------------------------------
+
+Product Number: 82
+ID: 6ae8ce49518ade02481fc343
+English Name: iPhone 5s
+English Description: The iPhone 5s is a classic smartphone known for its compact design and advanced features during its release. While it's an older model, it still provides a reliable user experience.
+----------------------------------------
+
+Product Number: 83
+ID: 6ae8ce49518ade02481fc344
+English Name: iPhone 6
+English Description: The iPhone 6 is a stylish and capable smartphone with a larger display and improved performance. It introduced new features and design elements, making it a popular choice in its time.
+----------------------------------------
+
+Product Number: 84
+ID: 6ae8ce49518ade02481fc345
+English Name: iPhone 13 Pro
+English Description: The iPhone 13 Pro is a cutting-edge smartphone with a powerful camera system, high-performance chip, and stunning display. It offers advanced features for users who demand top-notch technology.
+----------------------------------------
+
+Product Number: 85
+ID: 6ae8ce49518ade02481fc346
+English Name: iPhone X
+English Description: The iPhone X is a flagship smartphone featuring a bezel-less OLED display, facial recognition technology (Face ID), and impressive performance. It represents a milestone in iPhone design and innovation.
+----------------------------------------
+
+Product Number: 86
+ID: 6ae8ce49518ade02481fc347
+English Name: Oppo A57
+English Description: The Oppo A57 is a mid-range smartphone known for its sleek design and capable features. It offers a balance of performance and affordability, making it a popular choice.
+----------------------------------------
+
+Product Number: 87
+ID: 6ae8ce49518ade02481fc348
+English Name: Oppo F19 Pro Plus
+English Description: The Oppo F19 Pro Plus is a feature-rich smartphone with a focus on camera capabilities. It boasts advanced photography features and a powerful performance for a premium user experience.
+----------------------------------------
+
+Product Number: 88
+ID: 6ae8ce49518ade02481fc349
+English Name: Oppo K1
+English Description: The Oppo K1 series offers a range of smartphones with various features and specifications. Known for their stylish design and reliable performance, the Oppo K1 series caters to diverse user preferences.
+----------------------------------------
+
+Product Number: 89
+ID: 6ae8ce49518ade02481fc34a
+English Name: Realme C35
+English Description: The Realme C35 is a budget-friendly smartphone with a focus on providing essential features for everyday use. It offers a reliable performance and user-friendly experience.
+----------------------------------------
+
+Product Number: 90
+ID: 6ae8ce49518ade02481fc34b
+English Name: Realme X
+English Description: The Realme X is a mid-range smartphone known for its sleek design and impressive display. It offers a good balance of performance and camera capabilities for users seeking a quality device.
+----------------------------------------
+
+Product Number: 91
+ID: 6ae8ce49518ade02481fc34c
+English Name: Realme XT
+English Description: The Realme XT is a feature-rich smartphone with a focus on camera technology. It comes equipped with advanced camera sensors, delivering high-quality photos and videos for photography enthusiasts.
+----------------------------------------
+
+Product Number: 92
+ID: 6ae8ce49518ade02481fc34d
+English Name: Samsung Galaxy S7
+English Description: The Samsung Galaxy S7 is a flagship smartphone known for its sleek design and advanced features. It features a high-resolution display, powerful camera, and robust performance.
+----------------------------------------
+
+Product Number: 93
+ID: 6ae8ce49518ade02481fc34e
+English Name: Samsung Galaxy S8
+English Description: The Samsung Galaxy S8 is a premium smartphone with an Infinity Display, offering a stunning visual experience. It boasts advanced camera capabilities and cutting-edge technology.
+----------------------------------------
+
+Product Number: 94
+ID: 6ae8ce49518ade02481fc34f
+English Name: Samsung Galaxy S10
+English Description: The Samsung Galaxy S10 is a flagship device featuring a dynamic AMOLED display, versatile camera system, and powerful performance. It represents innovation and excellence in smartphone technology.
+----------------------------------------
+
+Product Number: 95
+ID: 6ae8ce49518ade02481fc350
+English Name: Vivo S1
+English Description: The Vivo S1 is a stylish and mid-range smartphone offering a blend of design and performance. It features a vibrant display, capable camera system, and reliable functionality.
+----------------------------------------
+
+Product Number: 96
+ID: 6ae8ce49518ade02481fc351
+English Name: Vivo V9
+English Description: The Vivo V9 is a smartphone known for its sleek design and emphasis on capturing high-quality selfies. It features a notch display, dual-camera setup, and a modern design.
+----------------------------------------
+
+Product Number: 97
+ID: 6ae8ce49518ade02481fc352
+English Name: Vivo X21
+English Description: The Vivo X21 is a premium smartphone with a focus on cutting-edge technology. It features an in-display fingerprint sensor, a high-resolution display, and advanced camera capabilities.
+----------------------------------------
+
+Product Number: 98
+ID: 6ae8ce49518ade02481fc353
+English Name: American Football
+English Description: The American Football is a classic ball used in American football games. It is designed for throwing and catching, making it an essential piece of equipment for the sport.
+----------------------------------------
+
+Product Number: 99
+ID: 6ae8ce49518ade02481fc354
+English Name: Baseball Ball
+English Description: The Baseball Ball is a standard baseball used in baseball games. It features a durable leather cover and is designed for pitching, hitting, and fielding in the game of baseball.
+----------------------------------------
+
+Product Number: 100
+ID: 6ae8ce49518ade02481fc355
+English Name: Baseball Glove
+English Description: The Baseball Glove is a protective glove worn by baseball players. It is designed to catch and field the baseball, providing players with comfort and control during the game.
+----------------------------------------
+
+Product Number: 101
+ID: 6ae8ce49518ade02481fc356
+English Name: Basketball
+English Description: The Basketball is a standard ball used in basketball games. It is designed for dribbling, shooting, and passing in the game of basketball, suitable for both indoor and outdoor play.
+----------------------------------------
+
+Product Number: 102
+ID: 6ae8ce49518ade02481fc357
+English Name: Basketball Rim
+English Description: The Basketball Rim is a sturdy hoop and net assembly mounted on a basketball backboard. It provides a target for shooting and scoring in the game of basketball.
+----------------------------------------
+
+Product Number: 103
+ID: 6ae8ce49518ade02481fc358
+English Name: Cricket Ball
+English Description: The Cricket Ball is a hard leather ball used in the sport of cricket. It is bowled and batted in the game, and its hardness and seam contribute to the dynamics of cricket play.
+----------------------------------------
+
+Product Number: 104
+ID: 6ae8ce49518ade02481fc359
+English Name: Cricket Bat
+English Description: The Cricket Bat is an essential piece of cricket equipment used by batsmen to hit the cricket ball. It is made of wood and comes in various sizes and designs.
+----------------------------------------
+
+Product Number: 105
+ID: 6ae8ce49518ade02481fc35a
+English Name: Cricket Helmet
+English Description: The Cricket Helmet is a protective headgear worn by cricket players, especially batsmen and wicketkeepers. It provides protection against fast bowling and bouncers.
+----------------------------------------
+
+Product Number: 106
+ID: 6ae8ce49518ade02481fc35b
+English Name: Cricket Wicket
+English Description: The Cricket Wicket is a set of three stumps and two bails, forming a wicket used in the sport of cricket. Batsmen aim to protect the wicket while scoring runs.
+----------------------------------------
+
+Product Number: 107
+ID: 6ae8ce49518ade02481fc35c
+English Name: Feather Shuttlecock
+English Description: The Feather Shuttlecock is used in the sport of badminton. It features natural feathers and is designed for high-speed play, providing stability and accuracy during matches.
+----------------------------------------
+
+Product Number: 108
+ID: 6ae8ce49518ade02481fc35d
+English Name: Football
+English Description: The Football, also known as a soccer ball, is the standard ball used in the sport of football (soccer). It is designed for kicking and passing in the game.
+----------------------------------------
+
+Product Number: 109
+ID: 6ae8ce49518ade02481fc35e
+English Name: Golf Ball
+English Description: The Golf Ball is a small ball used in the sport of golf. It features dimples on its surface, providing aerodynamic lift and distance when struck by a golf club.
+----------------------------------------
+
+Product Number: 110
+ID: 6ae8ce49518ade02481fc35f
+English Name: Iron Golf
+English Description: The Iron Golf is a type of golf club designed for various golf shots. It features a solid metal head and is used for approach shots, chipping, and other golfing techniques.
+----------------------------------------
+
+Product Number: 111
+ID: 6ae8ce49518ade02481fc360
+English Name: Metal Baseball Bat
+English Description: The Metal Baseball Bat is a durable and lightweight baseball bat made from metal alloys. It is commonly used in baseball games for hitting and batting practice.
+----------------------------------------
+
+Product Number: 112
+ID: 6ae8ce49518ade02481fc361
+English Name: Tennis Ball
+English Description: The Tennis Ball is a standard ball used in the sport of tennis. It is designed for bouncing and hitting with tennis rackets during matches or practice sessions.
+----------------------------------------
+
+Product Number: 113
+ID: 6ae8ce49518ade02481fc362
+English Name: Tennis Racket
+English Description: The Tennis Racket is an essential piece of equipment used in the sport of tennis. It features a frame with strings and a grip, allowing players to hit the tennis ball.
+----------------------------------------
+
+Product Number: 114
+ID: 6ae8ce49518ade02481fc363
+English Name: Volleyball
+English Description: The Volleyball is a standard ball used in the sport of volleyball. It is designed for passing, setting, and spiking over the net during volleyball matches.
+----------------------------------------
+
+Product Number: 115
+ID: 6ae8ce49518ade02481fc364
+English Name: Black Sun Glasses
+English Description: The Black Sun Glasses are a classic and stylish choice, featuring a sleek black frame and tinted lenses. They provide both UV protection and a fashionable look.
+----------------------------------------
+
+Product Number: 116
+ID: 6ae8ce49518ade02481fc365
+English Name: Classic Sun Glasses
+English Description: The Classic Sun Glasses offer a timeless design with a neutral frame and UV-protected lenses. These sunglasses are versatile and suitable for various occasions.
+----------------------------------------
+
+Product Number: 117
+ID: 6ae8ce49518ade02481fc366
+English Name: Green and Black Glasses
+English Description: The Green and Black Glasses feature a bold combination of green and black colors, adding a touch of vibrancy to your eyewear collection. They are both stylish and eye-catching.
+----------------------------------------
+
+Product Number: 118
+ID: 6ae8ce49518ade02481fc367
+English Name: Party Glasses
+English Description: The Party Glasses are designed to add flair to your party outfit. With unique shapes or colorful frames, they're perfect for adding a playful touch to your look during celebrations.
+----------------------------------------
+
+Product Number: 119
+ID: 6ae8ce49518ade02481fc368
+English Name: Sunglasses
+English Description: The Sunglasses offer a classic and simple design with a focus on functionality. These sunglasses provide essential UV protection while maintaining a timeless look.
+----------------------------------------
+
+Product Number: 120
+ID: 6ae8ce49518ade02481fc369
+English Name: iPad Mini 2021 Starlight
+English Description: The iPad Mini 2021 in Starlight is a compact and powerful tablet from Apple. Featuring a stunning Retina display, powerful A-series chip, and a sleek design, it offers a premium tablet experience.
+----------------------------------------
+
+Product Number: 121
+ID: 6ae8ce49518ade02481fc36a
+English Name: Samsung Galaxy Tab S8 Plus Grey
+English Description: The Samsung Galaxy Tab S8 Plus in Grey is a high-performance Android tablet by Samsung. With a large AMOLED display, powerful processor, and S Pen support, it's ideal for productivity and entertainment.
+----------------------------------------
+
+Product Number: 122
+ID: 6ae8ce49518ade02481fc36b
+English Name: Samsung Galaxy Tab White
+English Description: The Samsung Galaxy Tab in White is a sleek and versatile Android tablet. With a vibrant display, long-lasting battery, and a range of features, it offers a great user experience for various tasks.
+----------------------------------------
+
+Product Number: 123
+ID: 6ae8ce49518ade02481fc36c
+English Name: Blue Frock
+English Description: The Blue Frock is a charming and stylish dress for various occasions. With a vibrant blue color and a comfortable design, it adds a touch of elegance to your wardrobe.
+----------------------------------------
+
+Product Number: 124
+ID: 6ae8ce49518ade02481fc36d
+English Name: Girl Summer Dress
+English Description: The Girl Summer Dress is a cute and breezy dress designed for warm weather. With playful patterns and lightweight fabric, it's perfect for keeping cool and stylish during the summer.
+----------------------------------------
+
+Product Number: 125
+ID: 6ae8ce49518ade02481fc36e
+English Name: Gray Dress
+English Description: The Gray Dress is a versatile and chic option for various occasions. With a neutral gray color, it can be dressed up or down, making it a wardrobe staple for any fashion-forward individual.
+----------------------------------------
+
+Product Number: 126
+ID: 6ae8ce49518ade02481fc36f
+English Name: Short Frock
+English Description: The Short Frock is a playful and trendy dress with a shorter length. Ideal for casual outings or special occasions, it combines style and comfort for a fashionable look.
+----------------------------------------
+
+Product Number: 127
+ID: 6ae8ce49518ade02481fc370
+English Name: Tartan Dress
+English Description: The Tartan Dress features a classic tartan pattern, bringing a timeless and sophisticated touch to your wardrobe. Perfect for fall and winter, it adds a hint of traditional charm.
+----------------------------------------
+
+Product Number: 128
+ID: 6ae8ce49518ade02481fc371
+English Name: 300 Touring
+English Description: The 300 Touring is a stylish and comfortable sedan, known for its luxurious features and smooth performance.
+----------------------------------------
+
+Product Number: 129
+ID: 6ae8ce49518ade02481fc372
+English Name: Charger SXT RWD
+English Description: The Charger SXT RWD is a powerful and sporty rear-wheel-drive sedan, offering a blend of performance and practicality.
+----------------------------------------
+
+Product Number: 130
+ID: 6ae8ce49518ade02481fc373
+English Name: Dodge Hornet GT Plus
+English Description: The Dodge Hornet GT Plus is a compact and agile hatchback, perfect for urban driving with a touch of sportiness.
+----------------------------------------
+
+Product Number: 131
+ID: 6ae8ce49518ade02481fc374
+English Name: Durango SXT RWD
+English Description: The Durango SXT RWD is a spacious and versatile SUV, known for its strong performance and family-friendly features.
+----------------------------------------
+
+Product Number: 132
+ID: 6ae8ce49518ade02481fc375
+English Name: Pacifica Touring
+English Description: The Pacifica Touring is a stylish and well-equipped minivan, offering comfort and convenience for family journeys.
+----------------------------------------
+
+Product Number: 133
+ID: 6ae8ce49518ade02481fc376
+English Name: Blue Women's Handbag
+English Description: The Blue Women's Handbag is a stylish and spacious accessory for everyday use. With a vibrant blue color and multiple compartments, it combines fashion and functionality.
+----------------------------------------
+
+Product Number: 134
+ID: 6ae8ce49518ade02481fc377
+English Name: Heshe Women's Leather Bag
+English Description: The Heshe Women's Leather Bag is a luxurious and high-quality leather bag for the sophisticated woman. With a timeless design and durable craftsmanship, it's a versatile accessory.
+----------------------------------------
+
+Product Number: 135
+ID: 6ae8ce49518ade02481fc378
+English Name: Prada Women Bag
+English Description: The Prada Women Bag is an iconic designer bag that exudes elegance and luxury. Crafted with precision and featuring the Prada logo, it's a statement piece for fashion enthusiasts.
+----------------------------------------
+
+Product Number: 136
+ID: 6ae8ce49518ade02481fc379
+English Name: White Faux Leather Backpack
+English Description: The White Faux Leather Backpack is a trendy and practical backpack for the modern woman. With a sleek white design and ample storage space, it's perfect for both casual and on-the-go styles.
+----------------------------------------
+
+Product Number: 137
+ID: 6ae8ce49518ade02481fc37a
+English Name: Women Handbag Black
+English Description: The Women Handbag in Black is a classic and versatile accessory that complements various outfits. With a timeless black color and functional design, it's a must-have in every woman's wardrobe.
+----------------------------------------
+
+Product Number: 138
+ID: 6ae8ce49518ade02481fc37b
+English Name: Black Women's Gown
+English Description: The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.
+----------------------------------------
+
+Product Number: 139
+ID: 6ae8ce49518ade02481fc37c
+English Name: Corset Leather With Skirt
+English Description: The Corset Leather With Skirt is a bold and edgy ensemble that combines a stylish corset with a matching skirt. Ideal for fashion-forward individuals, it makes a statement at any event.
+----------------------------------------
+
+Product Number: 140
+ID: 6ae8ce49518ade02481fc37d
+English Name: Corset With Black Skirt
+English Description: The Corset With Black Skirt is a chic and versatile outfit that pairs a fashionable corset with a classic black skirt. It offers a trendy and coordinated look for various occasions.
+----------------------------------------
+
+Product Number: 141
+ID: 6ae8ce49518ade02481fc37e
+English Name: Dress Pea
+English Description: The Dress Pea is a stylish and comfortable dress with a pea pattern. Perfect for casual outings, it adds a playful and fun element to your wardrobe, making it a great choice for day-to-day wear.
+----------------------------------------
+
+Product Number: 142
+ID: 6ae8ce49518ade02481fc37f
+English Name: Marni Red & Black Suit
+English Description: The Marni Red & Black Suit is a sophisticated and fashion-forward suit ensemble. With a combination of red and black tones, it showcases a modern design for a bold and confident look.
+----------------------------------------
+
+Product Number: 143
+ID: 6ae8ce49518ade02481fc380
+English Name: Green Crystal Earring
+English Description: The Green Crystal Earring is a dazzling accessory that features a vibrant green crystal. With a classic design, it adds a touch of elegance to your ensemble, perfect for formal or special occasions.
+----------------------------------------
+
+Product Number: 144
+ID: 6ae8ce49518ade02481fc381
+English Name: Green Oval Earring
+English Description: The Green Oval Earring is a stylish and versatile accessory with a unique oval shape. Whether for casual or dressy occasions, its green hue and contemporary design make it a standout piece.
+----------------------------------------
+
+Product Number: 145
+ID: 6ae8ce49518ade02481fc382
+English Name: Tropical Earring
+English Description: The Tropical Earring is a fun and playful accessory inspired by tropical elements. Featuring vibrant colors and a lively design, it's perfect for adding a touch of summer to your look.
+----------------------------------------
+
+Product Number: 146
+ID: 6ae8ce49518ade02481fc383
+English Name: Black & Brown Slipper
+English Description: The Black & Brown Slipper is a comfortable and stylish choice for casual wear. Featuring a blend of black and brown colors, it adds a touch of sophistication to your relaxation.
+----------------------------------------
+
+Product Number: 147
+ID: 6ae8ce49518ade02481fc384
+English Name: Calvin Klein Heel Shoes
+English Description: Calvin Klein Heel Shoes are elegant and sophisticated, designed for formal occasions. With a classic design and high-quality materials, they complement your stylish ensemble.
+----------------------------------------
+
+Product Number: 148
+ID: 6ae8ce49518ade02481fc385
+English Name: Golden Shoes Woman
+English Description: The Golden Shoes for Women are a glamorous choice for special occasions. Featuring a golden hue and stylish design, they add a touch of luxury to your outfit.
+----------------------------------------
+
+Product Number: 149
+ID: 6ae8ce49518ade02481fc386
+English Name: Pampi Shoes
+English Description: Pampi Shoes offer a blend of comfort and style for everyday use. With a versatile design, they are suitable for various casual occasions, providing a trendy and relaxed look.
+----------------------------------------
+
+Product Number: 150
+ID: 6ae8ce49518ade02481fc387
+English Name: Red Shoes
+English Description: The Red Shoes make a bold statement with their vibrant red color. Whether for a party or a casual outing, these shoes add a pop of color and style to your wardrobe.
+----------------------------------------
+
+Product Number: 151
+ID: 6ae8ce49518ade02481fc388
+English Name: IWC Ingenieur Automatic Steel
+English Description: The IWC Ingenieur Automatic Steel watch is a durable and sophisticated timepiece. With a stainless steel case and automatic movement, it combines precision and style for watch enthusiasts.
+----------------------------------------
+
+Product Number: 152
+ID: 6ae8ce49518ade02481fc389
+English Name: Rolex Datejust Women
+English Description: The Rolex Datejust Women's watch is an iconic timepiece designed for women. With a timeless design and a date complication, it offers both elegance and functionality.
+----------------------------------------
+
+Product Number: 153
+ID: 6ae8ce49518ade02481fc38a
+English Name: Watch Gold for Women
+English Description: The Gold Women's Watch is a stunning accessory that combines luxury and style. Featuring a gold-plated case and a chic design, it adds a touch of glamour to any outfit.
+----------------------------------------
+
+Product Number: 154
+ID: 6ae8ce49518ade02481fc38b
+English Name: Women's Wrist Watch
+English Description: The Women's Wrist Watch is a versatile and fashionable timepiece for everyday wear. With a comfortable strap and a simple yet elegant design, it complements various styles.
+----------------------------------------
+
+Product Number: 155
+ID: 6ae8ce49518ade02481fc38c
+English Name: Wireless Bluetooth Headphones
+English Description: Wireless headphones with comfortable ear cushions and clear sound.
+----------------------------------------
+
+Product Number: 156
+ID: 6ae8ce49518ade02481fc38d
+English Name: Professional Digital Camera
+English Description: Digital camera for high-quality photography.
+----------------------------------------
+
+Product Number: 157
+ID: 6ae8ce49518ade02481fc38e
+English Name: Smart LED Monitor
+English Description: High-resolution monitor suitable for work and entertainment.
+----------------------------------------
+
+Product Number: 158
+ID: 6ae8ce49518ade02481fc38f
+English Name: Portable Bluetooth Speaker
+English Description: Portable wireless speaker with powerful sound.
+----------------------------------------
+
+Product Number: 159
+ID: 6ae8ce49518ade02481fc390
+English Name: Wireless Gaming Controller
+English Description: Wireless controller designed for comfortable gaming.
+----------------------------------------
+
+Product Number: 160
+ID: 6ae8ce49518ade02481fc391
+English Name: Mechanical Gaming Keyboard
+English Description: Mechanical keyboard suitable for gaming and productivity.
+----------------------------------------
+
+Product Number: 161
+ID: 6ae8ce49518ade02481fc392
+English Name: Wireless Computer Mouse
+English Description: Ergonomic wireless mouse for everyday computer use.
+----------------------------------------
+
+Product Number: 162
+ID: 6ae8ce49518ade02481fc393
+English Name: USB-C Charging Hub
+English Description: Multi-port USB-C hub for connecting and charging devices.
+----------------------------------------
+
+Product Number: 163
+ID: 6ae8de17dd2616d580d5c342
+English Name: Test Product
+English Description: Testing manager product creation
+----------------------------------------
+
+Product Number: 164
+ID: 6ae8dea7dd2616d580d5c343
+English Name: Test Product
+English Description: Testing manager product creation
+----------------------------------------

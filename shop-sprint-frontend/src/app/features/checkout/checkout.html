@@ -1,0 +1,356 @@
+
+<div class="checkout-page" [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+
+  <div class="checkout-header">
+    <h1>
+      {{ currentLanguage === 'en' ? 'Checkout' : 'إتمام الشراء' }}
+    </h1>
+
+    <p>
+      {{ currentLanguage === 'en'
+        ? 'Complete your order details'
+        : 'أكمل بيانات طلبك' }}
+    </p>
+  </div>
+
+  @if (successMessage) {
+
+    <div class="empty-checkout">
+      <i class="fa-solid fa-circle-check"></i>
+
+      <h2>
+        {{ currentLanguage === 'en'
+          ? 'Order Placed Successfully!'
+          : 'تم تسجيل الطلب بنجاح!' }}
+      </h2>
+
+      <p>{{ successMessage }}</p>
+
+      <p>
+        <strong>
+          {{ currentLanguage === 'en' ? 'Order ID:' : 'رقم الطلب:' }}
+        </strong>
+        {{ orderId }}
+      </p>
+
+      <a routerLink="/">
+        {{ currentLanguage === 'en' ? 'Continue Shopping' : 'متابعة التسوق' }}
+      </a>
+    </div>
+
+  } @else if (cartItems.length > 0) {
+
+    <div class="checkout-container">
+
+      <div class="checkout-form">
+
+        <h2>
+          {{ currentLanguage === 'en'
+            ? 'Customer Information'
+            : 'بيانات العميل' }}
+        </h2>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'Full Name *' : 'الاسم بالكامل *' }}
+          </label>
+
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="customer.name"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Enter your full name'
+              : 'أدخل اسمك بالكامل'"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'Email Address' : 'البريد الإلكتروني' }}
+          </label>
+
+          <input
+            type="email"
+            name="email"
+            [(ngModel)]="customer.email"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Enter your email'
+              : 'أدخل بريدك الإلكتروني'"
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'Phone Number *' : 'رقم الهاتف *' }}
+          </label>
+
+          <input
+            type="tel"
+            name="phone"
+            [(ngModel)]="customer.phone"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Enter your phone number'
+              : 'أدخل رقم هاتفك'"
+            required
+          >
+        </div>
+
+        <div class="form-divider"></div>
+
+        <h2>
+          {{ currentLanguage === 'en' ? 'Delivery Address' : 'عنوان التوصيل' }}
+        </h2>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'City *' : 'المدينة *' }}
+          </label>
+
+          <input
+            type="text"
+            name="city"
+            [(ngModel)]="address.city"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Enter your city'
+              : 'أدخل المدينة'"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'Street Address *' : 'اسم الشارع *' }}
+          </label>
+
+          <input
+            type="text"
+            name="street"
+            [(ngModel)]="address.street"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Enter your street address'
+              : 'أدخل اسم الشارع'"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'Address Details' : 'تفاصيل العنوان' }}
+          </label>
+
+          <textarea
+            name="details"
+            [(ngModel)]="address.details"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Building number, floor, apartment...'
+              : 'رقم المبنى، الدور، الشقة...'"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'en' ? 'Order Notes' : 'ملاحظات الطلب' }}
+          </label>
+
+          <textarea
+            name="notes"
+            [(ngModel)]="notes"
+            [placeholder]="currentLanguage === 'en'
+              ? 'Any special instructions for your order...'
+              : 'أي تعليمات أو ملاحظات خاصة بطلبك...'"
+            rows="3"
+          ></textarea>
+        </div>
+
+        <div class="payment-method-section">
+
+          <h2>
+            {{ currentLanguage === 'en' ? 'Payment Method' : 'طريقة الدفع' }}
+          </h2>
+
+          <label
+            class="payment-option"
+            [class.selected]="selectedPaymentMethod === 'cash_on_delivery'"
+          >
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="cash_on_delivery"
+              [(ngModel)]="selectedPaymentMethod"
+            >
+
+            <i class="fa-solid fa-truck"></i>
+
+            <div>
+              <strong>
+                {{ currentLanguage === 'en'
+                  ? 'Cash on Delivery'
+                  : 'الدفع عند الاستلام' }}
+              </strong>
+
+              <p>
+                {{ currentLanguage === 'en'
+                  ? 'Pay when your order arrives.'
+                  : 'ادفع عند وصول طلبك.' }}
+              </p>
+            </div>
+          </label>
+
+          <label
+            class="payment-option"
+            [class.selected]="selectedPaymentMethod === 'stripe'"
+          >
+            <input
+              type="radio"
+              name="paymentMethod"
+              value="stripe"
+              [(ngModel)]="selectedPaymentMethod"
+            >
+
+            <i class="fa-brands fa-stripe"></i>
+
+            <div>
+              <strong>
+                {{ currentLanguage === 'en'
+                  ? 'Pay Online with Stripe'
+                  : 'الدفع الإلكتروني عبر Stripe' }}
+              </strong>
+
+              <p>
+                {{ currentLanguage === 'en'
+                  ? 'Pay securely using your card.'
+                  : 'ادفع بأمان باستخدام بطاقتك.' }}
+              </p>
+            </div>
+          </label>
+
+        </div>
+
+        @if (showStripeCheckout) {
+          <div class="stripe-payment-section">
+            <h2>
+              {{ currentLanguage === 'en'
+                ? 'Complete Your Payment'
+                : 'أكمل عملية الدفع' }}
+            </h2>
+
+            <p>
+              {{ currentLanguage === 'en'
+                ? 'Enter your card details securely below.'
+                : 'أدخل بيانات بطاقتك بأمان بالأسفل.' }}
+            </p>
+
+            <div
+              #stripeCheckoutContainer
+              id="stripe-embedded-checkout"
+            ></div>
+          </div>
+        }
+
+      </div>
+
+      <div class="checkout-summary">
+
+        <h2>
+          {{ currentLanguage === 'en' ? 'Order Summary' : 'ملخص الطلب' }}
+        </h2>
+
+        @for (item of cartItems; track item._id) {
+
+          <div class="checkout-item">
+
+            <div class="checkout-item-image">
+              @if (item.image) {
+                <img [src]="item.image" [alt]="item.name[currentLanguage]">
+              } @else {
+                <i class="fa-solid fa-image"></i>
+              }
+            </div>
+
+            <div class="checkout-item-info">
+              <h3>{{ item.name[currentLanguage] }}</h3>
+
+              <p>
+                {{ item.price | currency:'EGP':'symbol':'1.0-2' }}
+              </p>
+            </div>
+
+          </div>
+
+        }
+
+        <div class="summary-divider"></div>
+
+        <div class="summary-row">
+          <span>
+            {{ currentLanguage === 'en' ? 'Products' : 'المنتجات' }}
+          </span>
+
+          <span>{{ cartItems.length }}</span>
+        </div>
+
+        <div class="summary-row total-row">
+          <strong>
+            {{ currentLanguage === 'en' ? 'Total' : 'الإجمالي' }}
+          </strong>
+
+          <strong>
+            {{ getTotal() | currency:'EGP':'symbol':'1.0-2' }}
+          </strong>
+        </div>
+
+        @if (errorMessage) {
+          <p class="checkout-error">{{ errorMessage }}</p>
+        }
+
+        @if (!showStripeCheckout) {
+          <button
+            class="place-order-btn"
+            type="button"
+            [disabled]="isSubmitting"
+            (click)="placeOrder()"
+          >
+            @if (isSubmitting) {
+              {{ currentLanguage === 'en' ? 'Placing Order...' : 'جارٍ تسجيل الطلب...' }}
+            } @else {
+              {{ currentLanguage === 'en' ? 'Place Order' : 'تأكيد الطلب' }}
+            }
+          </button>
+        }
+
+        <a routerLink="/cart" class="back-to-cart">
+          {{ currentLanguage === 'en' ? 'Back to Cart' : 'العودة إلى السلة' }}
+        </a>
+
+      </div>
+
+    </div>
+
+  } @else {
+
+    <div class="empty-checkout">
+      <i class="fa-solid fa-cart-shopping"></i>
+
+      <h2>
+        {{ currentLanguage === 'en'
+          ? 'Your Cart is Empty'
+          : 'سلة التسوق فارغة' }}
+      </h2>
+
+      <p>
+        {{ currentLanguage === 'en'
+          ? 'Add some products before proceeding to checkout.'
+          : 'أضف بعض المنتجات قبل إتمام عملية الشراء.' }}
+      </p>
+
+      <a routerLink="/">
+        {{ currentLanguage === 'en' ? 'Continue Shopping' : 'متابعة التسوق' }}
+      </a>
+    </div>
+
+  }
+
+</div>

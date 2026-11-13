@@ -1,0 +1,93 @@
+
+<div
+  class="product-details-page"
+  [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'"
+>
+
+  <!-- Loading -->
+  @if (isLoading) {
+    <p>
+      {{ currentLanguage === 'ar' ? 'جاري تحميل تفاصيل المنتج...' : 'Loading product details...' }}
+    </p>
+  }
+
+  <!-- Error -->
+  @else if (errorMessage) {
+    <p>{{ errorMessage }}</p>
+  }
+
+  <!-- Product Details -->
+  @else if (item) {
+
+    <div class="breadcrumb">
+      <a routerLink="/">
+        {{ currentLanguage === 'ar' ? 'الرئيسية' : 'Home' }}
+      </a>
+
+      <i class="fa-solid fa-chevron-right"></i>
+
+      <span>
+        {{ currentLanguage === 'ar' ? 'تفاصيل المنتج' : 'Product Details' }}
+      </span>
+    </div>
+
+    <div class="product-container">
+
+      <div class="product-image">
+        @if (item.image) {
+          <img [src]="item.image" [alt]="productName">
+        }
+        @else {
+          <i class="fa-solid fa-image"></i>
+        }
+      </div>
+
+      <div class="product-info">
+
+        <span class="product-category">
+          {{ categoryName }}
+        </span>
+
+        <h1>{{ productName }}</h1>
+
+        <div class="product-price">
+          {{ item.price | currency:'EGP':'symbol':'1.0-2' }}
+        </div>
+
+        <div class="product-divider"></div>
+
+        <h3>
+          {{ currentLanguage === 'ar' ? 'وصف المنتج' : 'Product Description' }}
+        </h3>
+
+        <p>{{ productDescription }}</p>
+
+        <div class="product-actions">
+
+          @if (favoriteMessage) {
+            <p class="success-message">{{ favoriteMessage }}</p>
+          }
+
+          <button class="add-cart-btn" (click)="addToCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            {{ currentLanguage === 'ar' ? 'أضف إلى السلة' : 'Add to Cart' }}
+          </button>
+
+          <button class="favorite-btn" (click)="addToFavorites()">
+            <i class="fa-regular fa-heart"></i>
+
+            {{ currentLanguage === 'ar' ? 'أضف إلى المفضلة' : 'Add to Favorites' }}
+          </button>
+
+        </div>
+
+        @if (successMessage) {
+          <p class="success-message">{{ successMessage }}</p>
+        }
+
+      </div>
+
+    </div>
+  }
+</div>

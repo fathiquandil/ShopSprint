@@ -1,0 +1,256 @@
+
+<main>
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <span class="hero-label">
+        {{ currentLanguage === 'en' ? 'WELCOME TO SHOPSPRINT' : 'مرحباً بك في شوب سبرينت' }}
+      </span>
+
+      <h1>
+        @if (currentLanguage === 'en') {
+          Everything You Need,
+          <span>All in One Place.</span>
+        } @else {
+          كل ما تحتاجه،
+          <span>في مكان واحد.</span>
+        }
+      </h1>
+
+      <p>
+        {{
+          currentLanguage === 'en'
+            ? 'Discover thousands of products, explore your favorite categories and enjoy a better shopping experience.'
+            : 'اكتشف آلاف المنتجات، وتصفح أقسامك المفضلة، واستمتع بتجربة تسوق أفضل.'
+        }}
+      </p>
+
+      <button
+        class="shop-btn"
+        type="button"
+        (click)="filterByCategory('')"
+      >
+        {{ currentLanguage === 'en' ? 'Explore Products →' : 'تصفح المنتجات ←' }}
+      </button>
+
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-icon">🛍️</div>
+
+      <div class="floating-card card-one">
+        📱 {{ currentLanguage === 'en' ? 'Electronics' : 'إلكترونيات' }}
+      </div>
+
+      <div class="floating-card card-two">
+        👟 {{ currentLanguage === 'en' ? 'Fashion' : 'أزياء' }}
+      </div>
+
+      <div class="floating-card card-three">
+        🏠 {{ currentLanguage === 'en' ? 'Home' : 'المنزل' }}
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+
+    <div class="section-header">
+
+      <div>
+        <span class="section-label">
+          {{ currentLanguage === 'en' ? 'OUR COLLECTION' : 'مجموعتنا' }}
+        </span>
+
+        <h2>
+          {{ currentLanguage === 'en' ? 'Featured Products' : 'منتجات مميزة' }}
+        </h2>
+
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? 'Explore our latest products and find what you need.'
+              : 'اكتشف أحدث منتجاتنا واعثر على ما تحتاجه.'
+          }}
+        </p>
+      </div>
+
+      <a
+        href="#products"
+        class="view-all-btn"
+        (click)="filterByCategory('')"
+      >
+        {{ currentLanguage === 'en' ? 'View All Products' : 'عرض كل المنتجات' }}
+
+        <i
+          class="fa-solid"
+          [class.fa-arrow-right]="currentLanguage === 'en'"
+          [class.fa-arrow-left]="currentLanguage === 'ar'"
+        ></i>
+      </a>
+
+    </div>
+
+    <!-- Loading -->
+    @if (isLoading) {
+      <div class="products-message">
+        <p>
+          {{ currentLanguage === 'en' ? 'Loading products...' : 'جاري تحميل المنتجات...' }}
+        </p>
+      </div>
+    }
+
+    <!-- Error -->
+    @else if (errorMessage) {
+      <div class="products-message">
+
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? errorMessage
+              : 'حدث خطأ أثناء تحميل المنتجات.'
+          }}
+        </p>
+
+        <button type="button" (click)="loadItems()">
+          {{ currentLanguage === 'en' ? 'Try Again' : 'حاول مرة أخرى' }}
+        </button>
+
+      </div>
+    }
+
+    <!-- No Products -->
+    @else if (items.length === 0) {
+      <div class="products-message">
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? 'No products available yet.'
+              : 'لا توجد منتجات متاحة حالياً.'
+          }}
+        </p>
+      </div>
+    }
+
+    <!-- Products Found -->
+    @else if (filteredItems.length > 0) {
+
+      <div class="products-grid">
+
+        @for (item of filteredItems; track item._id) {
+
+          <div class="product-card">
+
+            <!-- Product Image -->
+            <div class="product-image">
+
+              @if (item.image) {
+                <img
+                  [src]="item.image"
+                  [alt]="item.name[currentLanguage]"
+                >
+              } @else {
+                <i class="fa-solid fa-box-open"></i>
+              }
+
+              <!-- Product Actions -->
+              <div class="product-actions">
+
+                <!-- Favorite Button -->
+                <button
+                  type="button"
+                  class="card-action favorite-action"
+                  [class.is-favorite]="favoriteService.isFavorite(item._id)"
+                  (click)="toggleFavorite(item)"
+                  [attr.aria-label]="currentLanguage === 'en' ? 'Add to favorites' : 'إضافة للمفضلة'"
+                  [title]="currentLanguage === 'en' ? 'Favorites' : 'المفضلة'"
+                >
+                  <i
+                    class="fa-heart"
+                    [class.fa-solid]="favoriteService.isFavorite(item._id)"
+                    [class.fa-regular]="!favoriteService.isFavorite(item._id)"
+                  ></i>
+                </button>
+
+                <!-- Add to Cart Button -->
+                <button
+                  type="button"
+                  class="card-action cart-action"
+                  (click)="addToCart(item)"
+                  [attr.aria-label]="currentLanguage === 'en' ? 'Add to cart' : 'إضافة للسلة'"
+                  [title]="currentLanguage === 'en' ? 'Add to Cart' : 'إضافة للسلة'"
+                >
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+
+              <span class="product-category">
+                {{
+                  item.category?.name?.[currentLanguage] ||
+                  (currentLanguage === 'en' ? 'Uncategorized' : 'بدون قسم')
+                }}
+              </span>
+
+              <h3>{{ item.name[currentLanguage] }}</h3>
+
+              <p>{{ item.description[currentLanguage] }}</p>
+
+              <div class="product-footer">
+
+                <span class="product-price">
+                  {{ item.price | currency:'EGP':'symbol':'1.0-2' }}
+                </span>
+
+                <a
+                  class="details-btn"
+                  [routerLink]="['/item', item._id]"
+                >
+                  {{ currentLanguage === 'en' ? 'View Details' : 'عرض التفاصيل' }}
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    }
+
+    <!-- No Search Results -->
+    @else {
+
+      <div class="products-message">
+
+        <h3>
+          {{ currentLanguage === 'en' ? 'No Products Found' : 'لم يتم العثور على منتجات' }}
+        </h3>
+
+        <p>
+          {{
+            currentLanguage === 'en'
+              ? "We couldn't find any products matching your search or category."
+              : 'لم نتمكن من العثور على منتجات تطابق بحثك أو القسم المحدد.'
+          }}
+        </p>
+
+      </div>
+
+    }
+
+  </section>
+
+</main>

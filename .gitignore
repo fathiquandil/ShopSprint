@@ -1,0 +1,24 @@
+# Dependencies
+**/node_modules/
+
+# Environment secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Build and cache
+**/dist/
+**/build/
+**/coverage/
+**/.angular/
+
+# Logs
+**/*.log
+
+# Postman local data
+**/.postman/
+**/postman/
+
+# System files
+.DS_Store
+Thumbs.db

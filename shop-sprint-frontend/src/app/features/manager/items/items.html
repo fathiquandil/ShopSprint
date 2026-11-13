@@ -1,0 +1,237 @@
+
+<div class="items-page" [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+
+  <a routerLink="/manager/dashboard" class="back-dashboard-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    {{ currentLanguage === 'ar' ? 'العودة للوحة الرئيسية' : 'Back to Dashboard' }}
+  </a>
+
+  <header class="page-header">
+    <div>
+      <h1>{{ currentLanguage === 'ar' ? 'إدارة المنتجات' : 'Items Management' }}</h1>
+      <p>
+        {{ currentLanguage === 'ar'
+          ? 'إضافة وتعديل وحذف منتجات المتجر'
+          : 'Add, edit and manage your store items' }}
+      </p>
+    </div>
+
+    <button class="language-btn" type="button" (click)="toggleLanguage()">
+      <i class="fa-solid fa-globe"></i>
+      {{ currentLanguage === 'ar' ? 'English' : 'العربية' }}
+    </button>
+  </header>
+
+  <!-- Item Form -->
+  <section class="item-form-card">
+    <h2>
+      {{ editingItemId
+        ? (currentLanguage === 'ar' ? 'تعديل المنتج' : 'Edit Item')
+        : (currentLanguage === 'ar' ? 'إضافة منتج جديد' : 'Add New Item') }}
+    </h2>
+
+    <form (ngSubmit)="saveItem()">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'اسم المنتج بالإنجليزية' : 'Item Name (English)' }}</label>
+          <input type="text" name="nameEn" [(ngModel)]="form.name.en"
+            placeholder="Example: Samsung Galaxy S25" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'اسم المنتج بالعربية' : 'Item Name (Arabic)' }}</label>
+          <input type="text" name="nameAr" [(ngModel)]="form.name.ar"
+            placeholder="مثال: سامسونج جالاكسي S25" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'الوصف بالإنجليزية' : 'Description (English)' }}</label>
+          <textarea name="descriptionEn" [(ngModel)]="form.description.en"
+            placeholder="Enter item description" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'الوصف بالعربية' : 'Description (Arabic)' }}</label>
+          <textarea name="descriptionAr" [(ngModel)]="form.description.ar"
+            placeholder="أدخل وصف المنتج" rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'السعر (جنيه مصري)' : 'Price (EGP)' }}</label>
+          <input type="number" name="price" [(ngModel)]="form.price"
+            min="0" step="0.01" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'الكمية' : 'Quantity' }}</label>
+          <input type="number" name="quantity" [(ngModel)]="form.quantity"
+            min="0" step="1" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'رابط الصورة' : 'Image URL' }}</label>
+          <input type="url" name="image" [(ngModel)]="form.image"
+            placeholder="https://example.com/image.jpg" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ currentLanguage === 'ar' ? 'القسم' : 'Category' }}</label>
+          <select name="category" [(ngModel)]="form.category" required>
+            <option value="" disabled>
+              {{ currentLanguage === 'ar' ? 'اختر القسم' : 'Select Category' }}
+            </option>
+
+            <option *ngFor="let category of categories" [value]="category._id">
+              {{ getCategoryName(category) }}
+            </option>
+          </select>
+        </div>
+
+      </div>
+
+      <div class="image-preview" *ngIf="form.image.trim()">
+        <p>{{ currentLanguage === 'ar' ? 'معاينة الصورة' : 'Image Preview' }}</p>
+        <img [src]="form.image" alt="Item preview"
+          (error)="$any($event.target).style.display = 'none'"
+          (load)="$any($event.target).style.display = 'block'">
+      </div>
+
+      <div class="form-actions">
+        <button class="save-btn" type="submit" [disabled]="isSaving">
+          <i class="fa-solid fa-floppy-disk"></i>
+          {{
+            isSaving
+              ? (currentLanguage === 'ar' ? 'جاري الحفظ...' : 'Saving...')
+              : editingItemId
+                ? (currentLanguage === 'ar' ? 'حفظ التعديلات' : 'Save Changes')
+                : (currentLanguage === 'ar' ? 'إضافة المنتج' : 'Add Item')
+          }}
+        </button>
+
+        <button *ngIf="editingItemId" class="cancel-btn"
+          type="button" (click)="resetForm()">
+          {{ currentLanguage === 'ar' ? 'إلغاء' : 'Cancel' }}
+        </button>
+      </div>
+
+    </form>
+  </section>
+
+  <p class="success-message" *ngIf="successMessage">
+    <i class="fa-solid fa-circle-check"></i>
+    {{ successMessage }}
+  </p>
+
+  <p class="error-message" *ngIf="errorMessage">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    {{ errorMessage }}
+  </p>
+
+  <!-- Items List -->
+  <section class="items-list-card">
+
+    <div class="list-header">
+      <h2>{{ currentLanguage === 'ar' ? 'المنتجات الحالية' : 'Existing Items' }}</h2>
+      <span>{{ filteredItems.length }} {{ currentLanguage === 'ar' ? 'منتج' : 'Items' }}</span>
+    </div>
+
+    <!-- Search -->
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="search"
+        name="searchTerm"
+        [(ngModel)]="searchTerm"
+        [placeholder]="currentLanguage === 'ar'
+          ? 'ابحث عن منتج أو قسم...'
+          : 'Search by item name or category...'"
+      >
+
+      <button
+        *ngIf="searchTerm"
+        type="button"
+        class="clear-search-btn"
+        (click)="searchTerm = ''"
+        [title]="currentLanguage === 'ar' ? 'مسح البحث' : 'Clear search'"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div *ngIf="isLoading" class="loading-message">
+      {{ currentLanguage === 'ar' ? 'جاري تحميل المنتجات...' : 'Loading items...' }}
+    </div>
+
+    <div *ngIf="!isLoading && items.length === 0" class="empty-message">
+      {{ currentLanguage === 'ar' ? 'لا توجد منتجات حتى الآن.' : 'No items found.' }}
+    </div>
+
+    <div *ngIf="!isLoading && items.length > 0 && filteredItems.length === 0"
+      class="empty-message">
+      {{ currentLanguage === 'ar'
+        ? 'لم يتم العثور على منتجات مطابقة للبحث.'
+        : 'No items match your search.' }}
+    </div>
+
+    <div class="table-wrapper" *ngIf="!isLoading && filteredItems.length > 0">
+
+      <table>
+        <thead>
+          <tr>
+            <th>{{ currentLanguage === 'ar' ? 'الصورة' : 'Image' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'اسم المنتج' : 'Item Name' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'القسم' : 'Category' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'السعر' : 'Price' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الكمية' : 'Quantity' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الإجراءات' : 'Actions' }}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let item of filteredItems">
+
+            <td>
+              <img class="item-thumbnail" [src]="item.image" [alt]="item.name.en">
+            </td>
+
+            <td>
+              <strong>{{ item.name[currentLanguage] || item.name.en }}</strong>
+              <div class="item-description">
+                {{ item.description[currentLanguage] || item.description.en }}
+              </div>
+            </td>
+
+            <td>{{ getCategoryName(item.category) }}</td>
+
+            <td>{{ item.price | number:'1.2-2' }} EGP</td>
+
+            <td>{{ item.quantity }}</td>
+
+            <td>
+              <div class="action-buttons">
+                <button class="edit-btn" type="button"
+                  (click)="editItem(item)"
+                  [title]="currentLanguage === 'ar' ? 'تعديل' : 'Edit'">
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button class="delete-btn" type="button"
+                  (click)="deleteItem(item._id)"
+                  [title]="currentLanguage === 'ar' ? 'حذف' : 'Delete'">
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </section>
+
+</div>
