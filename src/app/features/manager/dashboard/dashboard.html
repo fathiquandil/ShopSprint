@@ -1,0 +1,127 @@
+
+<div class="dashboard-page" [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+
+  <aside class="sidebar">
+
+    <div class="sidebar-logo">
+      <h2>Shop<span>Sprint</span></h2>
+      <p>{{ currentLanguage === 'ar' ? 'لوحة تحكم المدير' : 'Manager Dashboard' }}</p>
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <a routerLink="/manager/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fa-solid fa-chart-line"></i>
+        {{ currentLanguage === 'ar' ? 'الرئيسية' : 'Dashboard' }}
+      </a>
+
+      <a routerLink="/manager/categories">
+        <i class="fa-solid fa-layer-group"></i>
+        {{ currentLanguage === 'ar' ? 'الأقسام' : 'Categories' }}
+      </a>
+
+      <a routerLink="/manager/items">
+        <i class="fa-solid fa-box"></i>
+        {{ currentLanguage === 'ar' ? 'المنتجات' : 'Items' }}
+      </a>
+
+      <a routerLink="/manager/orders">
+        <i class="fa-solid fa-cart-shopping"></i>
+        {{ currentLanguage === 'ar' ? 'الطلبات' : 'Orders' }}
+      </a>
+
+    </nav>
+
+    <button class="logout-btn" (click)="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      {{ currentLanguage === 'ar' ? 'تسجيل الخروج' : 'Logout' }}
+    </button>
+
+  </aside>
+
+  <main class="dashboard-main">
+
+    <header class="dashboard-header">
+      <div>
+        <h1>{{ currentLanguage === 'ar' ? 'الرئيسية' : 'Dashboard' }}</h1>
+        <p>
+          {{ currentLanguage === 'ar'
+            ? 'مرحباً بك في لوحة إدارة ShopSprint'
+            : 'Welcome to your ShopSprint management panel' }}
+        </p>
+      </div>
+
+      <button class="language-btn" (click)="toggleLanguage()">
+        <i class="fa-solid fa-globe"></i>
+        {{ currentLanguage === 'ar' ? 'English' : 'العربية' }}
+      </button>
+    </header>
+
+    <section class="welcome-card">
+      <div>
+        <h2>
+          {{ currentLanguage === 'ar' ? 'أهلاً بك في ShopSprint!' : 'Welcome to ShopSprint!' }}
+        </h2>
+
+        <p>
+          {{ currentLanguage === 'ar'
+            ? 'يمكنك إدارة الأقسام والمنتجات ومتابعة طلبات العملاء من هنا.'
+            : 'Manage your categories, products, and customer orders from here.' }}
+        </p>
+      </div>
+
+      <i class="fa-solid fa-store"></i>
+    </section>
+
+    <section class="management-section">
+
+      <h2>{{ currentLanguage === 'ar' ? 'إدارة المتجر' : 'Store Management' }}</h2>
+
+      <div class="management-grid">
+
+        <a routerLink="/manager/categories" class="management-card">
+          <div class="card-icon categories-icon">
+            <i class="fa-solid fa-layer-group"></i>
+          </div>
+          <h3>{{ currentLanguage === 'ar' ? 'الأقسام' : 'Categories' }}</h3>
+          <p>
+            {{ currentLanguage === 'ar'
+              ? 'إضافة وتعديل وحذف الأقسام'
+              : 'Add, edit and delete categories' }}
+          </p>
+          <span>{{ currentLanguage === 'ar' ? 'إدارة الأقسام' : 'Manage Categories' }} →</span>
+        </a>
+
+        <a routerLink="/manager/items" class="management-card">
+          <div class="card-icon items-icon">
+            <i class="fa-solid fa-box"></i>
+          </div>
+          <h3>{{ currentLanguage === 'ar' ? 'المنتجات' : 'Items' }}</h3>
+          <p>
+            {{ currentLanguage === 'ar'
+              ? 'إضافة وتعديل وحذف المنتجات'
+              : 'Add, edit and delete products' }}
+          </p>
+          <span>{{ currentLanguage === 'ar' ? 'إدارة المنتجات' : 'Manage Items' }} →</span>
+        </a>
+
+        <a routerLink="/manager/orders" class="management-card">
+          <div class="card-icon orders-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <h3>{{ currentLanguage === 'ar' ? 'الطلبات' : 'Orders' }}</h3>
+          <p>
+            {{ currentLanguage === 'ar'
+              ? 'عرض ومتابعة طلبات العملاء'
+              : 'View and manage customer orders' }}
+          </p>
+          <span>{{ currentLanguage === 'ar' ? 'إدارة الطلبات' : 'Manage Orders' }} →</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>

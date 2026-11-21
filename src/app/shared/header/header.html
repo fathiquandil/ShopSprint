@@ -1,0 +1,80 @@
+
+<header class="site-header">
+
+  <div class="header-container">
+
+    <a class="logo" routerLink="/">
+      Shop<span>Sprint</span>
+    </a>
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        [placeholder]="currentLanguage === 'en' ? 'Search for products...' : 'ابحث عن المنتجات...'"
+        [value]="searchTerm"
+        (input)="onSearch($event)"
+        (keyup.enter)="searchProducts()"
+      />
+
+      <button type="button" (click)="searchProducts()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        {{ currentLanguage === 'en' ? 'Search' : 'بحث' }}
+      </button>
+
+    </div>
+
+    <div class="header-actions">
+
+      <button
+        type="button"
+        class="language-btn"
+        (click)="toggleLanguage()"
+      >
+        <i class="fa-solid fa-globe"></i>
+        {{ currentLanguage === 'en' ? 'العربية' : 'English' }}
+      </button>
+
+      <a class="nav-link" routerLink="/favorites">
+        <i class="fa-regular fa-heart"></i>
+
+        {{ currentLanguage === 'en' ? 'Favorites' : 'المفضلة' }}
+
+        <span class="count-badge">{{ favoriteCount }}</span>
+      </a>
+
+      <a class="cart-btn" routerLink="/cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        {{ currentLanguage === 'en' ? 'Cart' : 'السلة' }}
+
+        <span class="count-badge">{{ cartCount }}</span>
+      </a>
+
+    </div>
+
+  </div>
+
+  <nav class="category-nav">
+
+    <a
+      routerLink="/"
+      [class.active]="router.url === '/'"
+    >
+      {{ currentLanguage === 'en' ? 'All Categories' : 'كل الأقسام' }}
+    </a>
+
+    @for (category of categories; track category._id) {
+
+      <a
+        [routerLink]="['/category', category._id]"
+        [class.active]="router.url.startsWith('/category/' + category._id)"
+      >
+        {{ category.name[currentLanguage] }}
+      </a>
+
+    }
+
+  </nav>
+
+</header>

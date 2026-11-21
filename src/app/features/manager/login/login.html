@@ -1,0 +1,82 @@
+
+<div class="login-page" [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+
+  <button class="language-btn" type="button" (click)="toggleLanguage()">
+    <i class="fa-solid fa-globe"></i>
+    {{ currentLanguage === 'ar' ? 'English' : 'العربية' }}
+  </button>
+
+  <div class="login-card">
+
+    <div class="login-logo">
+      <h1>Shop<span>Sprint</span></h1>
+      <p>
+        {{ currentLanguage === 'ar' ? 'لوحة تحكم المدير' : 'Manager Dashboard' }}
+      </p>
+    </div>
+
+    <div class="login-heading">
+      <h2>
+        {{ currentLanguage === 'ar' ? 'مرحباً بعودتك' : 'Welcome Back' }}
+      </h2>
+      <p>
+        {{ currentLanguage === 'ar'
+          ? 'سجل الدخول لإدارة متجرك'
+          : 'Sign in to manage your store' }}
+      </p>
+    </div>
+
+    <form (ngSubmit)="login()">
+
+      <div class="form-group">
+        <label for="username">
+          {{ currentLanguage === 'ar' ? 'اسم المستخدم' : 'Username' }}
+        </label>
+
+        <input
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="username"
+          [placeholder]="currentLanguage === 'ar' ? 'أدخل اسم المستخدم' : 'Enter your username'"
+          autocomplete="username"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">
+          {{ currentLanguage === 'ar' ? 'كلمة المرور' : 'Password' }}
+        </label>
+
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          [placeholder]="currentLanguage === 'ar' ? 'أدخل كلمة المرور' : 'Enter your password'"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+
+      <p class="error-message" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </p>
+
+      <button class="submit-btn" type="submit" [disabled]="isLoading">
+        {{
+          isLoading
+            ? (currentLanguage === 'ar' ? 'جاري تسجيل الدخول...' : 'Signing in...')
+            : (currentLanguage === 'ar' ? 'تسجيل الدخول' : 'Sign In')
+        }}
+      </button>
+
+    </form>
+
+    <div class="login-footer">
+      <p>ShopSprint © 2026</p>
+    </div>
+
+  </div>
+</div>

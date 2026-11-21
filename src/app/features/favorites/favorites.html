@@ -1,0 +1,133 @@
+
+<div class="favorites-page">
+
+  <!-- Favorites Header -->
+  <div class="favorites-header">
+
+    <span class="section-label">
+      {{ currentLanguage === 'en' ? 'YOUR COLLECTION' : 'مجموعتك المفضلة' }}
+    </span>
+
+    <h1>
+      {{ currentLanguage === 'en' ? 'My Favorites' : 'منتجاتي المفضلة' }}
+    </h1>
+
+    <p>
+      {{
+        currentLanguage === 'en'
+          ? 'Your favorite products in one place.'
+          : 'كل منتجاتك المفضلة في مكان واحد.'
+      }}
+    </p>
+
+  </div>
+
+  <!-- Favorites Products -->
+  @if (favoriteItems.length > 0) {
+
+    <div class="favorites-grid">
+
+      @for (item of favoriteItems; track item._id) {
+
+        <div class="favorite-card">
+
+          <!-- Product Image -->
+          <div class="favorite-image">
+
+            @if (item.image) {
+              <img
+                [src]="item.image"
+                [alt]="item.name[currentLanguage]"
+              >
+            } @else {
+              <i class="fa-solid fa-image"></i>
+            }
+
+          </div>
+
+          <!-- Product Information -->
+          <div class="favorite-info">
+
+            <h3>{{ item.name[currentLanguage] }}</h3>
+
+            <p class="favorite-price">
+              {{ item.price | currency:'EGP':'symbol':'1.0-2' }}
+            </p>
+
+            <!-- Actions -->
+            <div class="favorite-actions">
+
+              <button
+                type="button"
+                class="add-cart-btn"
+                (click)="addToCart(item)"
+              >
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                {{
+                  currentLanguage === 'en'
+                    ? 'Add to Cart'
+                    : 'أضف إلى السلة'
+                }}
+              </button>
+
+              <button
+                type="button"
+                class="remove-btn"
+                (click)="removeFavorite(item._id)"
+              >
+                <i class="fa-solid fa-trash"></i>
+
+                {{
+                  currentLanguage === 'en'
+                    ? 'Remove'
+                    : 'حذف'
+                }}
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  } @else {
+
+    <!-- Empty Favorites -->
+    <div class="empty-favorites">
+
+      <i class="fa-regular fa-heart"></i>
+
+      <h2>
+        {{
+          currentLanguage === 'en'
+            ? 'No Favorites Yet'
+            : 'لا توجد منتجات مفضلة حتى الآن'
+        }}
+      </h2>
+
+      <p>
+        {{
+          currentLanguage === 'en'
+            ? "You haven't added any products to your favorites."
+            : 'لم تقم بإضافة أي منتجات إلى المفضلة حتى الآن.'
+        }}
+      </p>
+
+      <a routerLink="/">
+        {{
+          currentLanguage === 'en'
+            ? 'Continue Shopping'
+            : 'متابعة التسوق'
+        }}
+      </a>
+
+    </div>
+
+  }
+
+</div>

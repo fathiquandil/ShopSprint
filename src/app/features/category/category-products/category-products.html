@@ -1,0 +1,167 @@
+
+<main class="category-page">
+
+  <!-- Category Header -->
+  @if (category && !categoryNotFound) {
+    <section class="category-header">
+
+      <span class="section-label">
+        {{ currentLanguage === 'en' ? 'SHOP BY CATEGORY' : 'تسوق حسب القسم' }}
+      </span>
+
+      <h1>{{ category.name[currentLanguage] }}</h1>
+
+      <p>{{ category.description[currentLanguage] }}</p>
+
+    </section>
+  }
+
+  <!-- Category Content -->
+  <section class="category-content">
+
+    <!-- Loading -->
+    @if (isLoading) {
+      <div class="products-message">
+        <p>
+          {{ currentLanguage === 'en' ? 'Loading products...' : 'جاري تحميل المنتجات...' }}
+        </p>
+      </div>
+    }
+
+    <!-- Category Not Found -->
+    @else if (categoryNotFound) {
+      <div class="products-message">
+
+        <h2>
+          {{ currentLanguage === 'en' ? 'Category Not Found' : 'القسم غير موجود' }}
+        </h2>
+
+        <p>
+          {{ currentLanguage === 'en'
+            ? "This category doesn't exist."
+            : 'هذا القسم غير موجود.' }}
+        </p>
+
+      </div>
+    }
+
+    <!-- Error -->
+    @else if (errorMessage) {
+      <div class="products-message">
+        <p>
+          {{ currentLanguage === 'en'
+            ? errorMessage
+            : 'حدث خطأ أثناء تحميل المنتجات.' }}
+        </p>
+      </div>
+    }
+
+    <!-- No Products -->
+    @else if (filteredItems.length === 0) {
+      <div class="products-message">
+
+        <h2>
+          {{ currentLanguage === 'en' ? 'No Products Found' : 'لا توجد منتجات' }}
+        </h2>
+
+        <p>
+          {{ currentLanguage === 'en'
+            ? "We couldn't find any products in this category matching your search."
+            : 'لم نتمكن من العثور على منتجات تطابق بحثك في هذا القسم.' }}
+        </p>
+
+      </div>
+    }
+
+    <!-- Products -->
+    @else {
+      <div class="products-grid">
+
+        @for (item of filteredItems; track item._id) {
+
+          <div class="product-card">
+
+            <!-- Product Image -->
+            <div class="product-image">
+
+              @if (item.image) {
+                <img
+                  [src]="item.image"
+                  [alt]="item.name[currentLanguage]"
+                >
+              } @else {
+                <i class="fa-solid fa-box-open"></i>
+              }
+
+              <!-- Product Actions -->
+              <div class="product-actions">
+
+                <!-- Favorite Button -->
+                <button
+                  type="button"
+                  class="card-action favorite-action"
+                  [class.is-favorite]="favoriteService.isFavorite(item._id)"
+                  (click)="toggleFavorite(item)"
+                  [attr.aria-label]="currentLanguage === 'en' ? 'Add to favorites' : 'إضافة إلى المفضلة'"
+                  [title]="currentLanguage === 'en' ? 'Favorites' : 'المفضلة'"
+                >
+                  <i
+                    class="fa-heart"
+                    [class.fa-solid]="favoriteService.isFavorite(item._id)"
+                    [class.fa-regular]="!favoriteService.isFavorite(item._id)"
+                  ></i>
+                </button>
+
+                <!-- Cart Button -->
+                <button
+                  type="button"
+                  class="card-action cart-action"
+                  (click)="addToCart(item)"
+                  [attr.aria-label]="currentLanguage === 'en' ? 'Add to cart' : 'إضافة إلى السلة'"
+                  [title]="currentLanguage === 'en' ? 'Add to Cart' : 'إضافة إلى السلة'"
+                >
+                  <i class="fa-solid fa-cart-plus"></i>
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+
+              <span class="product-category">
+                {{ category?.name?.[currentLanguage] }}
+              </span>
+
+              <h3>{{ item.name[currentLanguage] }}</h3>
+
+              <p>{{ item.description[currentLanguage] }}</p>
+
+              <div class="product-footer">
+
+                <span class="product-price">
+                  {{ item.price | currency:'EGP':'symbol':'1.0-2' }}
+                </span>
+
+                <a
+                  class="details-btn"
+                  [routerLink]="['/item', item._id]"
+                >
+                  {{ currentLanguage === 'en' ? 'View Details' : 'عرض التفاصيل' }}
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+    }
+
+  </section>
+
+</main>

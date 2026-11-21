@@ -1,0 +1,188 @@
+
+<div class="categories-page" [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+<a routerLink="/manager/dashboard" class="back-dashboard-btn">
+  <i class="fa-solid fa-arrow-left"></i>
+  {{ currentLanguage === 'ar' ? 'العودة للوحة الرئيسية' : 'Back to Dashboard' }}
+</a>
+
+  <header class="page-header">
+    <div>
+      <h1>{{ currentLanguage === 'ar' ? 'إدارة الأقسام' : 'Categories Management' }}</h1>
+      <p>
+        {{ currentLanguage === 'ar'
+          ? 'إضافة وتعديل وحذف أقسام المتجر'
+          : 'Add, edit and manage your store categories' }}
+      </p>
+    </div>
+
+    <button class="language-btn" type="button" (click)="toggleLanguage()">
+      <i class="fa-solid fa-globe"></i>
+      {{ currentLanguage === 'ar' ? 'English' : 'العربية' }}
+    </button>
+  </header>
+
+  <section class="category-form-card">
+    <h2>
+      {{ editingCategoryId
+        ? (currentLanguage === 'ar' ? 'تعديل القسم' : 'Edit Category')
+        : (currentLanguage === 'ar' ? 'إضافة قسم جديد' : 'Add New Category') }}
+    </h2>
+
+    <form (ngSubmit)="saveCategory()">
+
+      <div class="form-grid">
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'ar' ? 'اسم القسم بالإنجليزية' : 'Category Name (English)' }}
+          </label>
+          <input
+            type="text"
+            name="nameEn"
+            [(ngModel)]="form.name.en"
+            placeholder="Example: Electronics"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'ar' ? 'اسم القسم بالعربية' : 'Category Name (Arabic)' }}
+          </label>
+          <input
+            type="text"
+            name="nameAr"
+            [(ngModel)]="form.name.ar"
+            placeholder="مثال: الإلكترونيات"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'ar' ? 'الوصف بالإنجليزية' : 'Description (English)' }}
+          </label>
+          <textarea
+            name="descriptionEn"
+            [(ngModel)]="form.description.en"
+            placeholder="Enter category description"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>
+            {{ currentLanguage === 'ar' ? 'الوصف بالعربية' : 'Description (Arabic)' }}
+          </label>
+          <textarea
+            name="descriptionAr"
+            [(ngModel)]="form.description.ar"
+            placeholder="أدخل وصف القسم"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+
+      </div>
+
+      <div class="form-actions">
+        <button class="save-btn" type="submit" [disabled]="isSaving">
+          <i class="fa-solid fa-floppy-disk"></i>
+          {{
+            isSaving
+              ? (currentLanguage === 'ar' ? 'جاري الحفظ...' : 'Saving...')
+              : editingCategoryId
+                ? (currentLanguage === 'ar' ? 'حفظ التعديلات' : 'Save Changes')
+                : (currentLanguage === 'ar' ? 'إضافة القسم' : 'Add Category')
+          }}
+        </button>
+
+        <button
+          *ngIf="editingCategoryId"
+          class="cancel-btn"
+          type="button"
+          (click)="resetForm()"
+        >
+          {{ currentLanguage === 'ar' ? 'إلغاء' : 'Cancel' }}
+        </button>
+      </div>
+
+    </form>
+  </section>
+
+  <p class="success-message" *ngIf="successMessage">
+    <i class="fa-solid fa-circle-check"></i>
+    {{ successMessage }}
+  </p>
+
+  <p class="error-message" *ngIf="errorMessage">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    {{ errorMessage }}
+  </p>
+
+  <section class="categories-list-card">
+
+    <div class="list-header">
+      <h2>{{ currentLanguage === 'ar' ? 'الأقسام الحالية' : 'Existing Categories' }}</h2>
+      <span>{{ categories.length }} {{ currentLanguage === 'ar' ? 'قسم' : 'Categories' }}</span>
+    </div>
+
+    <div *ngIf="isLoading" class="loading-message">
+      {{ currentLanguage === 'ar' ? 'جاري تحميل الأقسام...' : 'Loading categories...' }}
+    </div>
+
+    <div *ngIf="!isLoading && categories.length === 0" class="empty-message">
+      {{ currentLanguage === 'ar' ? 'لا توجد أقسام حتى الآن.' : 'No categories found.' }}
+    </div>
+
+    <div class="table-wrapper" *ngIf="!isLoading && categories.length > 0">
+
+      <table>
+        <thead>
+          <tr>
+            <th>{{ currentLanguage === 'ar' ? 'الاسم بالإنجليزية' : 'English Name' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الاسم بالعربية' : 'Arabic Name' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الوصف' : 'Description' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الإجراءات' : 'Actions' }}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let category of categories">
+            <td>{{ category.name.en }}</td>
+            <td>{{ category.name.ar }}</td>
+            <td>
+              <div>{{ category.description.en }}</div>
+              <div class="arabic-description">{{ category.description.ar }}</div>
+            </td>
+            <td>
+              <div class="action-buttons">
+                <button
+                  class="edit-btn"
+                  type="button"
+                  (click)="editCategory(category)"
+                  [title]="currentLanguage === 'ar' ? 'تعديل' : 'Edit'"
+                >
+                  <i class="fa-solid fa-pen"></i>
+                </button>
+
+                <button
+                  class="delete-btn"
+                  type="button"
+                  (click)="deleteCategory(category._id)"
+                  [title]="currentLanguage === 'ar' ? 'حذف' : 'Delete'"
+                >
+                  <i class="fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </section>
+
+</div>

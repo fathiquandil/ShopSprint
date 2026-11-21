@@ -1,0 +1,367 @@
+
+<div class="orders-page" [attr.dir]="currentLanguage === 'ar' ? 'rtl' : 'ltr'">
+
+  <a routerLink="/manager/dashboard" class="back-dashboard-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    {{ currentLanguage === 'ar' ? 'العودة للوحة الرئيسية' : 'Back to Dashboard' }}
+  </a>
+
+  <header class="page-header">
+    <div>
+      <h1>{{ currentLanguage === 'ar' ? 'إدارة الطلبات' : 'Orders Management' }}</h1>
+      <p>
+        {{ currentLanguage === 'ar'
+          ? 'عرض ومتابعة وإدارة طلبات العملاء'
+          : 'View, track and manage customer orders' }}
+      </p>
+    </div>
+
+    <button class="language-btn" type="button" (click)="toggleLanguage()">
+      <i class="fa-solid fa-globe"></i>
+      {{ currentLanguage === 'ar' ? 'English' : 'العربية' }}
+    </button>
+  </header>
+
+  <!-- Statistics -->
+  <section class="stats-grid">
+
+    <div class="stat-card">
+      <div class="stat-icon total-icon">
+        <i class="fa-solid fa-box"></i>
+      </div>
+      <div>
+        <span>{{ currentLanguage === 'ar' ? 'إجمالي الطلبات' : 'Total Orders' }}</span>
+        <h2>{{ orders.length }}</h2>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon pending-icon">
+        <i class="fa-solid fa-clock"></i>
+      </div>
+      <div>
+        <span>{{ currentLanguage === 'ar' ? 'قيد الانتظار' : 'Pending' }}</span>
+        <h2>{{ orders.filter(o => o.status === 'pending').length }}</h2>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon processing-icon">
+        <i class="fa-solid fa-box-open"></i>
+      </div>
+      <div>
+        <span>{{ currentLanguage === 'ar' ? 'قيد التجهيز' : 'Processing' }}</span>
+        <h2>{{ orders.filter(o => o.status === 'processing').length }}</h2>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-icon delivered-icon">
+        <i class="fa-solid fa-check-circle"></i>
+      </div>
+      <div>
+        <span>{{ currentLanguage === 'ar' ? 'تم التسليم' : 'Delivered' }}</span>
+        <h2>{{ orders.filter(o => o.status === 'delivered').length }}</h2>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Messages -->
+  <p class="success-message" *ngIf="successMessage">
+    <i class="fa-solid fa-circle-check"></i>
+    {{ successMessage }}
+  </p>
+
+  <p class="error-message" *ngIf="errorMessage">
+    <i class="fa-solid fa-circle-exclamation"></i>
+    {{ errorMessage }}
+  </p>
+
+  <!-- Orders List -->
+  <section class="orders-list-card">
+
+    <div class="list-header">
+      <div>
+        <h2>{{ currentLanguage === 'ar' ? 'جميع الطلبات' : 'All Orders' }}</h2>
+        <p>{{ currentLanguage === 'ar' ? 'إدارة طلبات المتجر' : 'Manage store orders' }}</p>
+      </div>
+
+      <button class="refresh-btn" type="button" (click)="loadOrders()" [disabled]="isLoading">
+        <i class="fa-solid fa-rotate"></i>
+        {{ currentLanguage === 'ar' ? 'تحديث' : 'Refresh' }}
+      </button>
+    </div>
+
+    <!-- Search -->
+    <div class="search-box">
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <input
+        type="search"
+        name="searchTerm"
+        [(ngModel)]="searchTerm"
+        [placeholder]="currentLanguage === 'ar'
+          ? 'ابحث برقم الطلب أو اسم العميل أو الهاتف...'
+          : 'Search by order ID, customer name or phone...'"
+      >
+
+      <button
+        *ngIf="searchTerm"
+        type="button"
+        class="clear-search-btn"
+        (click)="searchTerm = ''"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div *ngIf="isLoading" class="loading-message">
+      {{ currentLanguage === 'ar' ? 'جاري تحميل الطلبات...' : 'Loading orders...' }}
+    </div>
+
+    <div *ngIf="!isLoading && orders.length === 0" class="empty-message">
+      <i class="fa-solid fa-box-open"></i>
+      <p>{{ currentLanguage === 'ar' ? 'لا توجد طلبات حتى الآن.' : 'No orders found.' }}</p>
+    </div>
+
+    <div
+      *ngIf="!isLoading && orders.length > 0 && filteredOrders.length === 0"
+      class="empty-message"
+    >
+      {{ currentLanguage === 'ar'
+        ? 'لا توجد طلبات مطابقة للبحث.'
+        : 'No orders match your search.' }}
+    </div>
+
+    <div class="table-wrapper" *ngIf="!isLoading && filteredOrders.length > 0">
+
+      <table>
+        <thead>
+          <tr>
+            <th>{{ currentLanguage === 'ar' ? 'رقم الطلب' : 'Order ID' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'العميل' : 'Customer' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'التاريخ' : 'Date' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الإجمالي' : 'Total' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الدفع' : 'Payment' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'الحالة' : 'Status' }}</th>
+            <th>{{ currentLanguage === 'ar' ? 'التفاصيل' : 'Details' }}</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let order of filteredOrders">
+
+            <td>
+              <strong class="order-id">#{{ order._id.slice(-8) }}</strong>
+            </td>
+
+            <td>
+              <strong>{{ order.customer.name }}</strong>
+              <small>{{ order.customer.phone }}</small>
+            </td>
+
+            <td>{{ formatDate(order.createdAt) }}</td>
+
+            <td class="price-cell">
+              {{ order.totalPrice | number:'1.2-2' }} EGP
+            </td>
+
+            <td>
+              <span class="payment-method">
+                {{ getPaymentMethodLabel(order.paymentMethod) }}
+              </span>
+              <small class="payment-status">
+                {{ getPaymentStatusLabel(order.paymentStatus) }}
+              </small>
+            </td>
+
+            <td>
+              <span class="status-badge" [ngClass]="'status-' + order.status">
+                {{ getStatusLabel(order.status) }}
+              </span>
+            </td>
+
+            <td>
+              <button
+                class="view-btn"
+                type="button"
+                (click)="viewOrder(order)"
+              >
+                <i class="fa-solid fa-eye"></i>
+                {{ currentLanguage === 'ar' ? 'عرض' : 'View' }}
+              </button>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+  </section>
+
+  <!-- Order Details Modal -->
+  <div class="modal-overlay" *ngIf="selectedOrder" (click)="closeOrderDetails()">
+
+    <div class="order-modal" (click)="$event.stopPropagation()">
+
+      <div class="modal-header">
+        <div>
+          <h2>{{ currentLanguage === 'ar' ? 'تفاصيل الطلب' : 'Order Details' }}</h2>
+          <p>#{{ selectedOrder._id }}</p>
+        </div>
+
+        <button class="close-btn" type="button" (click)="closeOrderDetails()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Customer Information -->
+      <section class="details-section">
+        <h3>
+          <i class="fa-solid fa-user"></i>
+          {{ currentLanguage === 'ar' ? 'بيانات العميل' : 'Customer Information' }}
+        </h3>
+
+        <div class="details-grid">
+          <div>
+            <span>{{ currentLanguage === 'ar' ? 'الاسم' : 'Name' }}</span>
+            <strong>{{ selectedOrder.customer.name }}</strong>
+          </div>
+
+          <div>
+            <span>{{ currentLanguage === 'ar' ? 'الهاتف' : 'Phone' }}</span>
+            <strong>{{ selectedOrder.customer.phone }}</strong>
+          </div>
+
+          <div>
+            <span>{{ currentLanguage === 'ar' ? 'البريد الإلكتروني' : 'Email' }}</span>
+            <strong>{{ selectedOrder.customer.email || '-' }}</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Address -->
+      <section class="details-section">
+        <h3>
+          <i class="fa-solid fa-location-dot"></i>
+          {{ currentLanguage === 'ar' ? 'عنوان التوصيل' : 'Delivery Address' }}
+        </h3>
+
+        <div class="address-info">
+          <p><strong>{{ currentLanguage === 'ar' ? 'المدينة:' : 'City:' }}</strong> {{ selectedOrder.address.city }}</p>
+          <p><strong>{{ currentLanguage === 'ar' ? 'الشارع:' : 'Street:' }}</strong> {{ selectedOrder.address.street }}</p>
+          <p *ngIf="selectedOrder.address.details">
+            <strong>{{ currentLanguage === 'ar' ? 'تفاصيل إضافية:' : 'Details:' }}</strong>
+            {{ selectedOrder.address.details }}
+          </p>
+        </div>
+      </section>
+
+      <!-- Ordered Items -->
+      <section class="details-section">
+        <h3>
+          <i class="fa-solid fa-cart-shopping"></i>
+          {{ currentLanguage === 'ar' ? 'المنتجات المطلوبة' : 'Ordered Items' }}
+        </h3>
+
+        <div class="ordered-items">
+
+          <div class="ordered-item" *ngFor="let item of selectedOrder.items">
+
+            <img [src]="item.image" [alt]="item.name.en">
+
+            <div class="ordered-item-info">
+              <strong>{{ item.name[currentLanguage] || item.name.en }}</strong>
+              <span>
+                {{ currentLanguage === 'ar' ? 'الكمية:' : 'Quantity:' }}
+                {{ item.quantity }}
+              </span>
+            </div>
+
+            <strong class="item-total">
+              {{ item.price * item.quantity | number:'1.2-2' }} EGP
+            </strong>
+
+          </div>
+
+        </div>
+
+        <div class="order-total">
+          <span>{{ currentLanguage === 'ar' ? 'الإجمالي' : 'Total' }}</span>
+          <strong>{{ selectedOrder.totalPrice | number:'1.2-2' }} EGP</strong>
+        </div>
+      </section>
+
+      <!-- Payment Information -->
+      <section class="details-section">
+        <h3>
+          <i class="fa-solid fa-credit-card"></i>
+          {{ currentLanguage === 'ar' ? 'بيانات الدفع' : 'Payment Information' }}
+        </h3>
+
+        <div class="details-grid">
+          <div>
+            <span>{{ currentLanguage === 'ar' ? 'طريقة الدفع' : 'Payment Method' }}</span>
+            <strong>{{ getPaymentMethodLabel(selectedOrder.paymentMethod) }}</strong>
+          </div>
+
+          <div>
+            <span>{{ currentLanguage === 'ar' ? 'حالة الدفع' : 'Payment Status' }}</span>
+            <strong>{{ getPaymentStatusLabel(selectedOrder.paymentStatus) }}</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Notes -->
+      <section class="details-section" *ngIf="selectedOrder.notes">
+        <h3>
+          <i class="fa-solid fa-note-sticky"></i>
+          {{ currentLanguage === 'ar' ? 'ملاحظات العميل' : 'Customer Notes' }}
+        </h3>
+
+        <p class="notes-text">{{ selectedOrder.notes }}</p>
+      </section>
+
+      <!-- Order Status -->
+      <section class="details-section status-management">
+        <h3>
+          <i class="fa-solid fa-list-check"></i>
+          {{ currentLanguage === 'ar' ? 'تحديث حالة الطلب' : 'Update Order Status' }}
+        </h3>
+
+        <div class="current-status">
+          <span>{{ currentLanguage === 'ar' ? 'الحالة الحالية:' : 'Current Status:' }}</span>
+          <span class="status-badge" [ngClass]="'status-' + selectedOrder.status">
+            {{ getStatusLabel(selectedOrder.status) }}
+          </span>
+        </div>
+
+        <div *ngIf="getAvailableStatuses(selectedOrder).length > 0" class="status-actions">
+
+          <button
+            *ngFor="let status of getAvailableStatuses(selectedOrder)"
+            type="button"
+            [ngClass]="'change-' + status"
+            [disabled]="isUpdating"
+            (click)="updateOrderStatus(selectedOrder, status)"
+          >
+            <i class="fa-solid fa-arrow-right"></i>
+            {{ getStatusLabel(status) }}
+          </button>
+
+        </div>
+
+        <p *ngIf="getAvailableStatuses(selectedOrder).length === 0" class="no-status-message">
+          {{ currentLanguage === 'ar'
+            ? 'لا توجد تغييرات أخرى متاحة لهذه الحالة.'
+            : 'No further status changes are available.' }}
+        </p>
+
+      </section>
+
+    </div>
+  </div>
+
+</div>
